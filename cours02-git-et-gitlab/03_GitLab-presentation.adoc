@@ -1,0 +1,197 @@
+== GitLab
+image::gitlab-logo.jpg[width=400]
+
+=== Qu'est ce que Gitlab ?
+
+Gitlab est une plateforme opensource et collaborative de développement basé sur Git. Gitlab permet d'héberger des projets web, du code, de la documentation. La gestion des différentes versions et conflits est prise en compte dans Gitlab et permet le travail de nombreux collaborateurs simultanément, efficacement et de manière interactive.
+
+=== Nous allons voir
+
+* L'administration de Gitlab
+* Naviguer dans gitlab
+* Gitlab dans le cycle de développement
+
+=== Administration 
+
+=== Installation 
+
+* Via plusieurs façons très différentes
+** Fichiers deb, rpm, node, python, gem ruby...?
+[source, bash]
+----
+sudo apt-get update
+sudo apt-get install -y curl openssh-server ca-certificates tzdata perl
+sudo apt-get install -y postfix
+curl https://packages.gitlab.com/install/repositories/gitlab/gitlab-ee/script.deb.sh \ 
+>  | sudo bash
+sudo EXTERNAL_URL="https://gitlab.example.com" apt-get install gitlab-ee
+vi /etc/gitlab/initial_root_password
+----
+
+* Ou via Docker!
+
+[source, bash]
+----
+docker run -d -p 8082:80 -p 2222:22 gitlab/gitlab-ce:latest
+----
+
+=== Admin Overview
+
+image::gitlab/admin-area.png[width=600]
+
+Gestion des users, projets et groupes
+
+=== Créer un utilisateur
+
+image::gitlab/admin-new-user.png[width=600]
+
+=== Créer un groupe
+
+image::gitlab/admin-new-group.png[width=480]
+
+* private : on spécifie les utilisateurs qui pourront accéder au groupe
+* internal : tout utilisateur connecté pourra accéder au groupe
+* public : le groupe est accessible à tout le monde
+
+=== Affecter un utilisateur à un groupe
+
+image::gitlab/admin-groups-groupe02.png[width=600]
+
+=== Créer un projet
+
+image::gitlab/admin-groups-groupe02.png[width=600]
+
+Ici aussi nous pouvons spécifier la visibilité (private, internal, public)
+
+=== Vision administrateur
+
+image::gitlab/projects-root.png[width=600]
+
+L'administrateur a une vision globale
+
+=== Vision utilisateur
+
+image::gitlab/projects-user1.png[width=600]
+
+L'utilisateur ne voit que ce dont il a accés (groupes, projets)
+
+=== Navigation 
+
+=== Page Projet
+
+image::gitlab/gitlab-projet.png[width=1024]
+
+=== Page Dépôt
+
+image::gitlab/gitlab-depot.png[width=1024]
+
+=== Page Commits
+
+image::gitlab/gitlab-commit.png[width=1024]
+
+=== Page Tickets
+
+image::gitlab/gitlab-tickets.png[width=1024]
+
+=== Page Tableau
+
+image::gitlab/gitlab-tableau.png[width=1024]
+
+=== Page Merge Request
+
+image::gitlab/gitlab-merge-request.png[width=1024]
+
+=== Cycle de Développement
+
+=== Workflow : GitFlow
+
+image::gitFlowWorkFlow.jpg[flowWorkFlow, width=260]
+
+=== Création d'une branche feature
+
+** Nouvelle Feature = Nouvelle Branche créé à partir d'une branche de développement (integration_X)
+
+----
+git checkout integration_X      // On se positionne sur la branche de développement
+git checkout -b feature/my_feature
+----
+
+** Une fois de développement terminé, on merge request sur la branche de développement (integration_X)
+
+----
+Faire un merge request depuis git
+La personne validant le merge devra aussi effectuer une revue de code
+----
+
+=== Création d'une branche anomalie
+
+** Même chose que pour la branche de feature.
+** Anomalie = Nouvelle Branche créé à partir d'une branche de développement (integration_X)
+
+----
+git checkout integration_X      // On se positionne sur la branche de développement
+git checkout -b hotfix/mon_anomalie  
+----
+
+** Une fois de développement terminé, on merge request sur la branche de développement (integration_X)
+
+----
+Faire un merge request depuis git
+La personne validant le merge devra aussi effectuer une revue de code
+----
+
+=== Workflow à retenir
+
+* master : image de la production
+* integration : branche de développement courant
+* feature/xxxxx : branche pour le développement d'une fonctionnalité
+* hotfix/xxxxx : branche pour la correction d'une anomalie
+
+=== Un process de merge request
+
+image::gitlab/mr001-new-feature-ma_feature.png[width=600]
+
+Depuis une branche, on peut effectuer une *Merge Request*
+
+=== La demande de merge request
+
+image::gitlab/mr002-new-merge-request.png[width=600]
+
+* on assigne la persone devant effectuer la revue
+* on peut ajouter un descriptif
+
+=== Les merges request en cours
+
+image::gitlab/mr003-merge-request-dboard.png[width=600]
+
+La page demandes de fusion permet de visualiser toutes le MR qui nous sont attribuées
+
+=== L'onglet discussion
+
+image::gitlab/mr004-mr-discussion.png[width=600]
+
+Cet onglet permet d'échanger avec le développeur ou les autres reviewers
+
+=== L'onglet commits
+
+image::gitlab/mr005-mr-commits.png[width=600]
+
+Permet de visualiser l'ensemble des commits inclus dans la MR
+
+=== L'onglet changes
+
+image::gitlab/mr006-mr-changes.png[width=600]
+
+Permet de visualiser les changements apportés
+
+=== Le merge effectué
+
+image::gitlab/mr008-merge-end.png[width=600]
+
+Une fois validée on peut effectuer le merge (on peut supprimer la branche feature)
+
+=== La branche master
+
+image::gitlab/mr009-master.png[width=600]
+
+Une fois réaliser les changement sont reportés dans la branche master

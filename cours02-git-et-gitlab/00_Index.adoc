@@ -1,0 +1,28 @@
+= GIT & GitLab
+:revnumber: 1.0
+:classification: C0 - Public
+:icons: font
+:imagesdir: img/
+:source-highlighter: highlightjs
+//:pygments-style: monokai
+:data-uri:
+
+Philippe Bousquet <pbousquet@sqli.com>
+
+== image:menu.png[]
+
+. Gestion de version
+. Présenteation GIT
+. Présentation GitLab
+
+[[Chap_01_GestionDeVersion]]
+include::01_Gestion-de-version.adoc[]
+
+[[Chap_02_GitPresentation]]
+include::02_Git-presentation.adoc[]
+
+[[Chap_03_GitLabPresentation]]
+include::03_GitLab-presentation.adoc[]
+
+[[Chap_04_Questions]]
+include::04_Questions.adoc[]

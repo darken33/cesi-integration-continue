@@ -1,0 +1,243 @@
+== Présentation Git
+
+image::git-logo-white.png[width=400]
+
+=== Les commandes de bases
+
+=== git help 
+
+Accéder à l'aide de git
+
+----
+git help <verbe>
+git <verbe> --help
+man git-<verbe>
+----
+
+=== git config
+
+Configurer git
+
+----
+git config --global user.name "Petit chat"
+git config --global user.email "petitchat@sqli.com"
+----
+
+=== git clone
+
+Cloner un projet
+
+----
+git clone https://gitlab.bordeaux.sqli.com/...
+----
+
+=== git status
+
+Etat des fichiers locaux
+
+----
+git status
+----
+
+=== git add
+
+Ajouter des fichiers pour le prochain commit
+
+----
+git add chemin/monfichier.something
+git add -A
+----
+
+=== git commit
+
+Commit des modifications
+
+----
+git commit -m "My commit message..."
+----
+
+Pour faciliter la traçabilité, précisez en début de commit le numéro d'exigence ou d'anomalie concernée par ce commit.
+
+IMPORTANT: A ce moment la, le commit est local, et ne seront donc pas présentes sur le serveur distant
+
+=== git push
+
+Push des modifications sur le serveur distant
+
+----
+git push
+----
+
+=== git pull
+
+Récupérer les dernières modifications du serveur distant et merge
+
+----
+git pull
+----
+
+IMPORTANT: Un git pull n'est rien de plus qu'un git fetch suivit d'un git merge
+
+=== git branch
+
+Afficher la liste des branches (ajouter -r pour les branches distantes)
+----
+git branch
+----
+
+=== git checkout
+
+Récupérer une version / branche spécifique
+
+----
+git checkout my_awesome_branch
+----
+
+=== git tag
+
+Lister les tag
+
+----
+git tag
+----
+
+Créer un tag
+
+----
+git tag -a V1.0.0.0 -m "I want to create a tag"
+----
+
+=== Commandes avancés
+
+=== Pousser ses modifications
+
+----
+git pull                          // Récupère les commits distants
+git status                        // Visualisation locale des modifs
+git add "myfile"                  // Ajout fichier au prochain commit
+git commit -m "Je commit un truc" // Commit local
+git log                           // Visualisation des commits locaux
+git push                          // Push sur origin (serveur distant)
+----
+
+=== Creation de branches
+
+*Avec initial commit*
+----
+git checkout -b BRANCH_01
+git status
+git add "myfile"
+git commit "initial commit"
+git push -u origin BRANCH_01
+----
+
+*Sans initial commit*
+----
+git checkout -b BRANCH_01
+git push -u origin BRANCH_01
+----
+
+image::./newBranchGit.jpg[width=250]
+
+=== Effectuer un merge
+
+----
+git checkout master
+git pull
+git merge BRANCH_01 -m "merge BRANCH_01 -> master"
+git push
+----
+
+image::./mergeBranchGit.jpg[]
+
+
+=== Suppression de branches
+
+*Supprimer une branche Locale*
+
+----
+git branch -d BRANCH_01
+git branch -D BRANCH_01   // Supprime la branche même si ele n'a pas été mergée
+----
+
+*Supprimer une branche Distante*
+
+----
+git push origin --delete BRANCH_01
+----
+
+=== Catastrophe ! J'ai push quelque chose que je voulais pas !
+
+Pas de panique... on va régler ça.
+On va dire que l'on va revenir deux commit en arriere sur la branche master :
+
+image::./2commitToRemove.jpg[height=250]
+
+Il y a deux façon de faire...
+
+=== git reset --hard
+----
+git reset --hard master~2
+git push -f
+----
+
+image::./resetHard2CommitMasterGit.jpg[]
+
+Pas super cool, on perd définitivement nos deux commits
+
+=== git revert
+----
+git revert master~2..master
+git push
+----
+
+image::./revert2CommitMasterGit.jpg[]
+
+=== Merge VS Rebase
+
+Euh, mais c'est quoi un Rebase ?
+
+* Un rebase va rejouer sur une branche tous les commits d'une autre branche et ceci dans l'ordre des commits.
+* Un merge quant à lui permet d'avancer la branche courante en y ajoutant le travail d'une autre branche.
+
+=== Merge
+
+image::./mergeVsRebase/merge.jpg[merge, width=500]
+
+=== Rebase
+
+image::./mergeVsRebase/rebasing.jpg[rebasing, width=500]
+
+=== Exemple de rebase
+
+Etat de nos branches
+
+image::./rebase/initial.png[initalRebase]
+
+----
+git checkout mybranch
+git rebase master
+git push -f
+----
+
+=== Rebase cas utile
+
+Je suis sur le master, je fais mon développement tranquillement, j'ai déjà fait plusieurs commit (en local, et donc pas de push).
+Au moment de push, je me rend compte qu'un collègue a déjà push 1 commit sur le serveur distant .Pour éviter d'écraser ses modifications, git me sort un "rejected".
+A partir de la, je fais donc un :
+
+----
+git pull --rebase origin master
+----
+Pour récupérer dans ma branche locale les derniers commits distant de mon collègue, les jouer et me positionner au dernier commit effectué.
+
+=== Rebase cas utile
+
+A partir de la je peux push mes modifications. Et au niveau du master, il n'y aura pas de branche car pas de merge.
+
+image::./rebase/rebase.png[rebase]
+
+=== S'entrainer sur Git
+
+link:http://learngitbranching.js.org/[] +
+-> Ce site propose des démonstrations et un bac à sable en ligne. *Amusez-vous !*

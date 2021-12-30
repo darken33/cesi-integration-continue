@@ -1,0 +1,13 @@
+== Bonus
+
+* _link:bonus/[./bonus/]_
+** link:bonus/SQLI-NANTES_CheatSheetGIT_v1.6.pdf[Cheat Sheet - SQLI Nantes]
+
+== Liens à voir !
+
+link:http://learngitbranching.js.org/[] +
+-> Ce site propose des démonstrations et un bac à sable en ligne. *Amusez-vous !*
+
+
+link:https://www.atlassian.com/git/tutorials/merging-vs-rebasing[Mergin VS Rebasing] +
+-> Quand dois-je faire un merge ou un rebase ?

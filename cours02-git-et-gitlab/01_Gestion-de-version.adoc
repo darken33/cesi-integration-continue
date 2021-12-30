@@ -1,0 +1,26 @@
+:imagesdir: img/
+
+== La gestion de version
+
+=== Définition
+
+"`Un gestionnaire de version est un système qui enregistre l'évolution d'un fichier ou d'un ensemble de fichiers au cours du temps de manière à ce qu'on puisse rappeler une version antérieure d'un fichier à tout moment.`" +
+_Source : link:https://git-scm.com/book/fr/v1/D%C3%A9marrage-rapide-%C3%80-propos-de-la-gestion-de-version[git-scm]_
+
+*-> C'est un outil incontournable pour le travail collaboratif*
+
+=== Les Systèmes Centralisés
+
+CVCS : Centralized Version Control Systems
+
+image::CVCS.png[]
+
+Exemples : CVS, Subversion...
+
+=== Les Systèmes distribués
+
+DVCS : Distributed Version Control Systems
+
+image::DVCS.png[height="400"]
+
+Exemples : *Git*, Mercurial...
