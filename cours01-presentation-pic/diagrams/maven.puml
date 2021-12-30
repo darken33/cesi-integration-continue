@@ -1,0 +1,51 @@
+@startuml
+skinparam defaultFontSize 35
+
+cloud MavenCentral {
+  artifact "spring-core-5.0.7.jar" as scmc #lightblue
+}
+
+node Nexus {
+  database "repository" as repo {
+    artifact "project.jar" as pn #pink
+  }
+  database "mirror" as m {
+    artifact "spring-core-5.0.7.jar" as scn #lightblue
+  }
+}
+node Local {
+  node Workspace {
+    package "src/main/java" as source {
+      artifact "Files.java" as f #pink
+    }
+    package "target" as t {
+      artifact "project.jar" as pl #pink
+    }
+  }
+  node ".m2" {
+    artifact "setting.xml"
+    package "repository" {
+      artifact "project.jar" as pm2 #pink
+      artifact "spring-core-5.0.7.jar" as scm2 #lightblue
+    }
+  }
+}
+
+scmc ---up-> scn
+scn ---up-> scm2
+pl -> pm2
+pm2 -> pn
+
+note left of pl
+  **mvn package**
+end note
+
+note left of pm2
+  **mvn install**
+end note
+
+note left of pn
+  **mvn deploy**
+end note
+
+@enduml

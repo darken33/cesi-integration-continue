@@ -1,0 +1,41 @@
+@startuml
+skinparam defaultFontSize 35
+skinparam interfaceBackgroundColor pink
+
+node Host <<Linux>>  {
+  [<img:../images/docker-machine.png{scale=0.8}>] as dm
+  [<img:../images/docker.jpg{scale=0.4}>] as d
+  [<img:../images/virtualbox.png{scale=1}>] as vb
+
+  dm -right-> d
+  dm -down-> vb
+
+  node PIC <<VM>> #pink {
+    [jenkins] as jenkins #orange
+
+    [gitlab] as gitlab #orange
+    jenkins -down--> gitlab
+
+    [sonar] as sonar #orange
+    jenkins -down--> sonar
+
+    [nexus] as nexus #orange
+    jenkins -down--> nexus
+
+    [slave-docker] as slave
+    [mvn] <<transient>>  #orange
+    [sonar-scanner] <<transient>>  as scanner #orange
+    [wildfly] #orange
+    slave -down-> mvn
+    slave -down-> scanner
+    slave -down-> wildfly
+
+  }
+
+  jenkins -> slave
+
+  vb -> PIC
+
+}
+
+@enduml

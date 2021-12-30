@@ -1,0 +1,42 @@
+pipeline {
+  agent { node { label "slave"} }
+  options {
+    buildDiscarder(logRotator(numToKeepStr: '2', artifactNumToKeepStr: '2'))
+    disableConcurrentBuilds()
+  }
+  stages {
+    stage("STOP WILDFLY") {
+      steps {
+        script {
+          try {
+            sh "docker rm -f \$(docker ps -aq)"
+          } catch (error) {
+            echo "Error on stop containers"
+          }
+        }
+      }
+    }
+    stage("BUILD") {
+      steps {
+        sh "docker run --rm -i -v '$WORKSPACE/settings.xml':/root/.m2/settings.xml " +
+           "-v '$WORKSPACE':/tmp -w /tmp $MAVEN_IMAGE "+
+           "mvn clean deploy"
+        sh "mkdir -p deployments"
+        sh "cp -r target/*.war deployments/"
+      }
+    }
+    stage("SONAR") {
+      steps {
+       sh "docker run -i --rm -v '$WORKSPACE':/root/src $SONAR_SCANNER_IMAGE "+
+          "sonar-scanner -Dsonar.host.url=http://$PIC_IP:$SONAR_PORT -Dsonar.projectBaseDir=./src"
+     }
+    }
+    stage("DEPLOY") {
+      steps {
+       sh "docker run -dti -p $JBOSS_WILDFLY_PORT:8080 " +
+          "-v '$WORKSPACE/deployments':/opt/jboss/wildfly/standalone/deployments/ "+
+          "jboss/wildfly:10.1.0.Final"
+      }
+    }
+  }
+}

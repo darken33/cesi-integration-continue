@@ -1,0 +1,17 @@
+= Intégration continue : Qui s'y frotte s'y PIC !
+:revnumber: 1.0
+:classification: C0 - Public
+
+Philippe Bousquet <pbousquet@sqli.com>
+
+include::headers.adoc[]
+
+include::chapitre-introduction.adoc[leveloffset=1]
+
+include::chapitre-ic.adoc[leveloffset=1]
+
+include::chapitre-dev.adoc[leveloffset=1]
+
+include::chapitre-jenkins.adoc[leveloffset=1]
+
+include::chapitre-conclusion.adoc[leveloffset=1]

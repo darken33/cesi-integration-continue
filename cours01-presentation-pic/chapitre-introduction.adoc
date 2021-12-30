@@ -1,0 +1,15 @@
+= Plateforme Intégration Continue
+
+== Une plateforme d'outils...
+image::drawio/pic.png[width="700"]
+
+
+== ...mais aussi une méthodologie!
+image::images/methodology.jpg[]
+
+IMPORTANT: *Les outils ne font pas la méthodo!!!*
+
+== image:images/menu.png[]
+. Intégration Continue
+. Je développe
+. J'automatise

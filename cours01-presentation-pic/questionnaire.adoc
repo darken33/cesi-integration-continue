@@ -1,0 +1,19 @@
+= Questionnaire
+
+L'intégration continue, c'est quoi?::
+. Installer continuellement, manuellement, mon application sur un serveur d'intégration => KO
+. L'utilisation de Jenkins => KO
+. L'utilisation de Git, Jenkins, SonarQube... => KO
+. *Une philosophie de développement (intégration et feedback en continue) => OK*
+
+Quelle est la façon la plus simple d'installer un Jenkins?::
+. En téléchargeant les binaires sur le site et en lisant la documentation => KO
+. En récupérant une VM où c'est déjà fait => KO
+. *En utilisant une image docker officielle => OK*
+. C'est quoi Jenkins? => KO
+
+SonarQube permet d'analyser...::
+. que du code Java => KO
+. du code Java et Javascript => KO
+. *plus de 20 langages => OK*
+. c'est quoi SonarQube? => KO

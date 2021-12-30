@@ -1,0 +1,9 @@
+{
+  "insecure-registries" : [
+    "registry-private.docker.iscbordeaux.lan.bdx.sqli.com",
+    "registry-private.cloud.iscfrance.lan.bdx.sqli.com",
+    "10.33.44.4:5000"
+  ],
+  "dns": ["192.168.180.243", "10.33.33.43", "8.8.8.8", "8.8.4.4"],
+  "registry-mirrors": ["http://coreos-transverse.lan.bdx.sqli.com:5555"]
+}

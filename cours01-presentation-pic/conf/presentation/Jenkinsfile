@@ -1,0 +1,20 @@
+pipeline {
+  agent { node { label "slave"} }
+  options {
+    buildDiscarder(logRotator(numToKeepStr: '2', artifactNumToKeepStr: '2'))
+    disableConcurrentBuilds()
+  }
+  stages {
+    stage("COMPILE_DOC") {
+      steps {
+        sh "docker run -i --rm -v '$WORKSPACE':/documents -e FORMAT=revealjs-sqli -e THEME=sqlislide -e CSS=offline -e IMAGES=embedded-in-html $ASCIIDOCTOR_IMAGE presentation-pic.adoc"
+      }
+    }
+    stage("PUBLISH_ARTIFACT") {
+      steps {
+        sh "docker run --rm -u \$(id -u):\$(id -g)  -v '$WORKSPACE':/slides $PDF_IMAGE SLIDE_REVEALJS_SQLI_presentation-pic.html presentation-pic.pdf"
+        sh "curl -X PUT -v -u admin:$NEXUS_PWD --upload-file presentation-pic.pdf http://$PIC_IP:$NEXUS_PORT/repository/raw/"
+      }
+    }
+  }
+}

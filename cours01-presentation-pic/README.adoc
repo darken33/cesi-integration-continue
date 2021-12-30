@@ -1,0 +1,28 @@
+Mehdi Rebiai <mrebiai@sqli.com>
+
+== Menu
+. Intégration Continue
+. Je développe
+* Gitlab, Nexus, SonarQube
+. J'automatise
+* Jenkins
+
+== Infra
+Prérequis::
+* docker (partie client), testé avec v18.03.1-ce
+* docker-machine, testé avec v0.14.0
+* Virtualbox, testé avec v5.2.x
+* 16Go RAM
+* 8 CPU
+
+Commande `./pic.sh <OPTION>`::
+
+* `create`: création des VM
+* `start`: démarrage des services
+* `init`: initialisation des configurations sur la PIC (Gitlab, Jenkins, Nexus)
+* `stop`: arrêt des services et des VM (*pas de perte de données*)
+* `drop`: suppression des VM (*et des données*)
+* `status`: affichage du statut de l'infra
+
+== Questionnaire
+link:questionnaire.adoc[]

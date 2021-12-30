@@ -1,0 +1,26 @@
+= Conclusion
+image::images/panic.jpg[height=300]
+
+== En résumé
+IC:: *Philosophie* de développement misant sur le *feedback rapide*
+PIC:: Plateforme agrégeant des outils permettant l'IC
+
+IMPORTANT: Allons vers du Continuous Deployment...
+
+== Cette présentation...
+* ..a été produite en respectant les concepts présentés
+* Asciidoc, PlantUML, RevealJS, Draw.io, Image Docker Asciidoctor
+
+== Sources
+[bibliography]
+- http://www.martinfowler.com/articles/continuousIntegration.html
+- https://www.thoughtworks.com/continuous-integration
+- https://fr.wikipedia.org/wiki/Intégration_continue
+- http://blog.octo.com/devops-de-lintegration-continue-au-deploiement-continu/
+- http://www.zenika.com/Conseil/integration-continue.html
+
+== Livre
+image:images/continuousDelivery.jpg[height="500"]
+
+== Merci à tous
+image::images/question.jpg[width="400"]

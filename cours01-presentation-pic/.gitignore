@@ -1,0 +1,11 @@
+**/tmp*
+**/reveal*
+**/*.zip
+**/*.pdf
+**/*.html
+pic
+slave
+
+# intellij
+**/*.iml
+**/.idea

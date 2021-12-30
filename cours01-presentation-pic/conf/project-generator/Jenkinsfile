@@ -1,0 +1,52 @@
+pipeline {
+  agent { node { label "slave"} }
+  parameters {
+    string(name: "PROJECT_NAME", defaultValue: "", description: "nom du projet, ex: mon-projet")
+  }
+  options {
+    buildDiscarder(logRotator(numToKeepStr: '2', artifactNumToKeepStr: '2'))
+    disableConcurrentBuilds()
+  }
+  stages {
+    stage("CREATE_GITLAB_REPO") {
+      steps {
+        script {
+          withCredentials([string(credentialsId: 'gitlab', variable: 'token')]) {
+              sh "curl -H 'PRIVATE-TOKEN: $token' -X POST http://$PIC_IP:$GITLAB_HTTP_PORT/api/v4/projects?name=$PROJECT_NAME"
+          }
+          sh "sed -i 's/\$PROJECT_NAME/'$PROJECT_NAME'/g' project.fsh"
+          sh "sed -i 's/\$PROJECT_NAME/'$PROJECT_NAME'/g' sonar-project.properties"          
+        }
+      }
+    }
+    stage("GENERATE_PROJECT") {
+      steps {
+        // JBoss Forge
+        sh "cat project.input | docker run -u \$(id -u):\$(id -g) -i -v '$WORKSPACE':/opt/jboss/test -w /opt/jboss/test $JBOSS_FORGE_IMAGE"
+        sh "cp Jenkinsfile-build $PROJECT_NAME/Jenkinsfile"
+        sh "sed -i 's,\$PROJECT_NAME,'$PROJECT_NAME',g' $PROJECT_NAME/Jenkinsfile"
+        sh "cp settings.xml $PROJECT_NAME/."
+        sh "sed -i 's,</project>,,g' $PROJECT_NAME/pom.xml"
+        sh "cat distrib-mgt.xml >> $PROJECT_NAME/pom.xml"
+        sh "echo -e '</project>\n' >> $PROJECT_NAME/pom.xml"
+        sh "cp sonar-project.properties $PROJECT_NAME/."
+        dir (PROJECT_NAME) {
+          sh "git init"
+          sh "git remote add origin ssh://git@$PIC_IP:$GITLAB_SSH_PORT/root/${PROJECT_NAME}.git"
+          sh "git add ."
+          sh "git commit -m 'init'"
+          sh "git push -u origin master"
+        }
+      }
+    }
+    stage("CREATE_JENKINS_JOB") {
+      steps {
+        // FIXME admin password
+        sh "echo '$PROJECT_NAME' > ../../../jenkins_home/.ssh/job_name.txt"
+        sh "echo 'ssh://git@$PIC_IP:$GITLAB_SSH_PORT/root/${PROJECT_NAME}.git' > ../../../jenkins_home/.ssh/job_repo_url.txt"
+        sh "docker run --rm -i -w /usr/src/app -v '$WORKSPACE':/usr/src/app my$PYTHON_IMAGE upload.py job-creation.groovy http://$PIC_IP:$JENKINS_PORT admin $JENKINS_PWD"
+      }
+    }
+
+  }
+}

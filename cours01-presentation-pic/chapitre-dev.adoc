@@ -1,0 +1,45 @@
+= §2. Je développe
+image::images/keep-calm-and-unit-test-your-code.png[height=300]
+
+== Où mettre mon code?
+image:images/github.jpg[width=300]
+image:images/gitlab_white.png[width=300]
+image:images/Atlassian_Bitbucket_White.png[width=300]
+
+== Comment builder mon code? 
+
+image:images/java-white.png[width=300] image:images/maven-white.png[width=300] image:images/gradle-white.png[width=300]
+
+image:images/angular-white.png[width=300] image:images/reactjs-white.png[width=300] image:images/npm-white.png[width=300]  
+
+== Stocker ses artefacts
+
+image:images/nexus-white.png[width=300] image:images/harbor-white.png[width=300] image:images/amazons3-white.png[width=300]
+
+== Une histoire de tests
+image::images/pyramide-test.png[width=800]
+
+== Coder c'est tester!
+* Quand l'appli est KO
+** savoir *rapidement* *où* dans le code et *pourquoi*
+* Construire sa couverture de tests et *TNR* (Tests Non Régression)
+* Impact sur conception, modularité
+* Outils
+** JUnit, TestNG, Mockito, DbUnit, utPLSQL...
+** maven-surefire-plugin (UT), maven-failsafe-plugin (IT)
+
+== Continuous Inspection
+
+image::images/sonar-dashboard.png[]
+
+== Bug detection
+
+image:images/sonarqube.png[height=100]
+
+image::images/sonar-detect-bugs.png[]
+
+== Et dans son IDE 
+
+image:images/sonarlint.png[]
+
+image::images/sonarlint.gif[width=800]
