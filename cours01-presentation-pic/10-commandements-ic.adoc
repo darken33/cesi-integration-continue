@@ -1,0 +1,24 @@
+= image:images/moise.png[width=128]
+
+[.text-center]
+*Les 10 commandements de l'Intégration Continue*
+
+== I - Avoir son logiciel de gestion de versions image:images/git.png[width=32]  
+
+== II - Automatiser le Build image:images/automate.jpg[width=48] 
+
+== III - Build Self-testing image:images/self-test.png[width=48]  
+
+== IV - Commiter son travail tous les jours image:images/pc-feu.jpg[width=48]  
+
+== V - Déployer à chaque Build en succès image:images/ok.png[width=32] image:images/pc.png[width=32] 
+
+== VI - Corriger Build cassé immédiatement image:images/broken-build.jpg[width=32]  
+
+== VII - Garder un Build rapide image:images/vitesse.jpg[width=48]  
+ 
+== VIII - Tester sur un env clone de la prod image:images/docker.jpg[width=48]  
+
+== IX - Rendre disponible les artéfacts produits image:images/nexus-w.png[width=48]  
+
+== X - Tout le monde voit ce qu'il se passe image:images/dashboard.jpg[width=48]  
