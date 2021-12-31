@@ -1,0 +1,152 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html id="htmlId">
+<head>
+  <title>Coverage Report :: ConnaissanceClientServiceImpl</title>
+  <style type="text/css">
+    @import "../../.css/coverage.css";
+  </style>
+</head>
+
+<body>
+<div class="header"></div>
+
+<div class="content">
+<div class="breadCrumbs">
+    [ <a href="../../index.html">all classes</a> ]
+    [ <a href="../index.html">com.sqli.workshop.ddd.connaissance.client.domain.service</a> ]
+</div>
+
+<h1>Coverage Summary for Class: ConnaissanceClientServiceImpl (com.sqli.workshop.ddd.connaissance.client.domain.service)</h1>
+
+<table class="coverageStats">
+<tr>
+  <th class="name">Class</th>
+<th class="coverageStat 
+">
+  Class, %
+</th>
+<th class="coverageStat 
+">
+  Method, %
+</th>
+<th class="coverageStat 
+">
+  Line, %
+</th>
+</tr>
+<tr>
+  <td class="name">ConnaissanceClientServiceImpl</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (1/ 1)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (7/ 7)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (23/ 23)
+  </span>
+</td>
+</tr>
+
+</table>
+
+<br/>
+<br/>
+
+
+<div class="sourceCode"><i>1</i>&nbsp;package com.sqli.workshop.ddd.connaissance.client.domain.service;
+<i>2</i>&nbsp;
+<i>3</i>&nbsp;import java.util.List;
+<i>4</i>&nbsp;import java.util.Optional;
+<i>5</i>&nbsp;
+<i>6</i>&nbsp;import javax.validation.constraints.NotNull;
+<i>7</i>&nbsp;
+<i>8</i>&nbsp;import com.sqli.workshop.ddd.connaissance.client.domain.Adresse;
+<i>9</i>&nbsp;import com.sqli.workshop.ddd.connaissance.client.domain.enums.SituationFamiliale;
+<i>10</i>&nbsp;import com.sqli.workshop.ddd.connaissance.client.domain.interfaces.BusRepository;
+<i>11</i>&nbsp;import lombok.AllArgsConstructor;
+<i>12</i>&nbsp;import org.slf4j.Logger;
+<i>13</i>&nbsp;import org.slf4j.LoggerFactory;
+<i>14</i>&nbsp;import org.springframework.beans.factory.annotation.Autowired;
+<i>15</i>&nbsp;
+<i>16</i>&nbsp;import com.sqli.workshop.ddd.connaissance.client.domain.ConnaissanceClient;
+<i>17</i>&nbsp;import com.sqli.workshop.ddd.connaissance.client.domain.interfaces.ConnaissanceClientRepository;
+<i>18</i>&nbsp;import com.sqli.workshop.ddd.connaissance.client.domain.interfaces.ConnaissanceClientService;
+<i>19</i>&nbsp;import org.springframework.stereotype.Service;
+<i>20</i>&nbsp;
+<b class="fc"><i>21</i>&nbsp;@AllArgsConstructor</b>
+<i>22</i>&nbsp;@Service
+<i>23</i>&nbsp;public class ConnaissanceClientServiceImpl implements ConnaissanceClientService {
+<i>24</i>&nbsp;
+<b class="fc"><i>25</i>&nbsp;    private static final Logger LOG = LoggerFactory.getLogger(ConnaissanceClientServiceImpl.class);</b>
+<i>26</i>&nbsp;
+<i>27</i>&nbsp;    private final ConnaissanceClientRepository repository;
+<i>28</i>&nbsp;
+<i>29</i>&nbsp;    private final BusRepository bus;
+<i>30</i>&nbsp;
+<i>31</i>&nbsp;    public List&lt;ConnaissanceClient&gt; listerClients() {
+<b class="fc"><i>32</i>&nbsp;        List&lt;ConnaissanceClient&gt; result = repository.findAll();</b>
+<b class="fc"><i>33</i>&nbsp;        return result;</b>
+<i>34</i>&nbsp;    }
+<i>35</i>&nbsp;
+<i>36</i>&nbsp;    public ConnaissanceClient nouveauClient(ConnaissanceClient connaissanceClient) {
+<b class="fc"><i>37</i>&nbsp;        ConnaissanceClient result = repository.save(connaissanceClient);</b>
+<b class="fc"><i>38</i>&nbsp;        bus.sendEvent(result);</b>
+<b class="fc"><i>39</i>&nbsp;        return result;</b>
+<i>40</i>&nbsp;    }
+<i>41</i>&nbsp;
+<i>42</i>&nbsp;    public Optional&lt;ConnaissanceClient&gt; informationsClient(@NotNull String id) {
+<b class="fc"><i>43</i>&nbsp;        return repository.findById(id);</b>
+<i>44</i>&nbsp;    }
+<i>45</i>&nbsp;
+<i>46</i>&nbsp;    public Optional&lt;ConnaissanceClient&gt; changementAdresse(@NotNull String id, Adresse adresse, Boolean sendEvent) {
+<b class="fc"><i>47</i>&nbsp;        ConnaissanceClient result = null;</b>
+<b class="fc"><i>48</i>&nbsp;        Optional&lt;ConnaissanceClient&gt; connaissanceClient = repository.findById(id);</b>
+<b class="fc"><i>49</i>&nbsp;        if (connaissanceClient.isPresent()) {</b>
+<b class="fc"><i>50</i>&nbsp;            connaissanceClient.get().setAdresse(adresse);</b>
+<b class="fc"><i>51</i>&nbsp;            result = repository.save(connaissanceClient.get());</b>
+<b class="fc"><i>52</i>&nbsp;            if (sendEvent) bus.sendEvent(result);</b>
+<i>53</i>&nbsp;        }
+<b class="fc"><i>54</i>&nbsp;        return Optional.ofNullable(result);</b>
+<i>55</i>&nbsp;    }
+<i>56</i>&nbsp;
+<i>57</i>&nbsp;    public Optional&lt;ConnaissanceClient&gt; changementSituation(@NotNull String id, SituationFamiliale situationFamiliale, Integer nombreEnfants) {
+<b class="fc"><i>58</i>&nbsp;        ConnaissanceClient result = null;</b>
+<b class="fc"><i>59</i>&nbsp;        Optional&lt;ConnaissanceClient&gt; connaissanceClient = repository.findById(id);</b>
+<b class="fc"><i>60</i>&nbsp;        if (connaissanceClient.isPresent()) {</b>
+<b class="fc"><i>61</i>&nbsp;            connaissanceClient.get().setSituationFamiliale(situationFamiliale);</b>
+<b class="fc"><i>62</i>&nbsp;            connaissanceClient.get().setNombreEnfants(nombreEnfants);</b>
+<b class="fc"><i>63</i>&nbsp;            result = repository.save(connaissanceClient.get());</b>
+<b class="fc"><i>64</i>&nbsp;            bus.sendEvent(result);</b>
+<i>65</i>&nbsp;        }
+<b class="fc"><i>66</i>&nbsp;        return Optional.ofNullable(result);</b>
+<i>67</i>&nbsp;    }
+<i>68</i>&nbsp;
+<i>69</i>&nbsp;}
+</div>
+</div>
+
+<div class="footer">
+    
+    <div style="float:right;">generated on 2021-03-30 08:10</div>
+</div>
+</body>
+</html>

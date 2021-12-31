@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/connaissance-client.iml" filepath="$PROJECT_DIR$/connaissance-client.iml" />
+      <module fileurl="file://$PROJECT_DIR$/connaissance-client-api/connaissance-client-api.iml" filepath="$PROJECT_DIR$/connaissance-client-api/connaissance-client-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/connaissance-client-app/connaissance-client-app.iml" filepath="$PROJECT_DIR$/connaissance-client-app/connaissance-client-app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/connaissance-client-db-port/connaissance-client-db-port.iml" filepath="$PROJECT_DIR$/connaissance-client-db-port/connaissance-client-db-port.iml" />
+      <module fileurl="file://$PROJECT_DIR$/connaissance-client-domain/connaissance-client-domain.iml" filepath="$PROJECT_DIR$/connaissance-client-domain/connaissance-client-domain.iml" />
+      <module fileurl="file://$PROJECT_DIR$/connaissance-client-servicebus-port/connaissance-client-servicebus-port.iml" filepath="$PROJECT_DIR$/connaissance-client-servicebus-port/connaissance-client-servicebus-port.iml" />
+      <module fileurl="file://$PROJECT_DIR$/connaissance-client-servicebus-port-in/connaissance-client-servicebus-port-in.iml" filepath="$PROJECT_DIR$/connaissance-client-servicebus-port-in/connaissance-client-servicebus-port-in.iml" />
+    </modules>
+  </component>
+</project>

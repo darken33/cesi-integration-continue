@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>com.sqli.workshop.ddd</groupId>
+  <artifactId>connaissance-client</artifactId>
+  <version>1.0.0-SNAPSHOT</version>
+
+  <packaging>pom</packaging>
+
+  <name>connaissance-client</name>
+  <description>Connaissance Client</description>
+
+	<properties>
+		<java.version>11</java.version>
+		<maven.compiler.target>11</maven.compiler.target>
+		<maven.compiler.source>11</maven.compiler.source>
+		<springdoc-openapi.version>1.2.20</springdoc-openapi.version>
+		<openapi-generator-maven.version>3.3.4</openapi-generator-maven.version>
+		<springfox.version>2.9.2</springfox.version>
+		<swagger-annotations.version>1.5.11</swagger-annotations.version>
+		<build.helper.maven.plugin.version>3.0.0</build.helper.maven.plugin.version>
+		<spring.boot.version>2.3.6.RELEASE</spring.boot.version>
+		<spring.cloud.version>Hoxton.SR8</spring.cloud.version>
+		<mapstruct.version>1.3.1.Final</mapstruct.version>
+	</properties>
+
+ 	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-dependencies</artifactId>
+				<version>${spring.boot.version}</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework.cloud</groupId>
+				<artifactId>spring-cloud-dependencies</artifactId>
+				<version>${spring.cloud.version}</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+	<dependencies>
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<optional>true</optional>
+		</dependency>
+		<dependency>
+			<groupId>org.mapstruct</groupId>
+			<artifactId>mapstruct</artifactId>
+			<version>1.3.1.Final</version>
+		</dependency>
+	</dependencies>
+
+	<modules>
+	  <module>connaissance-client-domain</module>
+	  <module>connaissance-client-db-port</module>
+	  <module>connaissance-client-servicebus-port</module>
+		<module>connaissance-client-servicebus-port-in</module>
+	  <module>connaissance-client-api</module>
+	  <module>connaissance-client-app</module>
+    </modules>
+
+</project>

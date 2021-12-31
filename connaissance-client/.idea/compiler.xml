@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="connaissance-client-app" />
+        <module name="connaissance-client-servicebus-port-in" />
+        <module name="connaissance-client-api" />
+        <module name="connaissance-client-domain" />
+        <module name="connaissance-client-servicebus-port" />
+        <module name="connaissance-client-db-port" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="connaissance-client" target="11" />
+      <module name="connaissance-client-api" target="11" />
+      <module name="connaissance-client-app" target="11" />
+      <module name="connaissance-client-db-port" target="11" />
+      <module name="connaissance-client-domain" target="11" />
+      <module name="connaissance-client-servicebus-port" target="11" />
+      <module name="connaissance-client-servicebus-port-in" target="11" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

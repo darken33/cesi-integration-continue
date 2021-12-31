@@ -1,0 +1,6 @@
+projectKey=connaissance-client
+serverUrl=http://0.0.0.0:9000
+serverVersion=8.9.2.46101
+dashboardUrl=http://0.0.0.0:9000/dashboard?id=connaissance-client
+ceTaskId=AX37cPXkzPnkEV0qItc7
+ceTaskUrl=http://0.0.0.0:9000/api/ce/task?id=AX37cPXkzPnkEV0qItc7

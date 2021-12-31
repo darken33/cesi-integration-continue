@@ -1,0 +1,354 @@
+openapi: 3.0.1
+info:
+  title: Connaissance Client API
+  # title utilisé dans le
+  # @RequestMapping("${openapi.connaissanceClient.base-path:}")
+  # de ConnaissanceclientApiController
+  description: Documentation de l'API Connaissance Client
+  version: "1.0.0"
+  contact:
+    name: SQLI
+    url: http://sqli.com/
+    email: pbousquet@sqli.com
+  license:
+    name: Copyright (c) SQLI
+servers:
+  - url: http://localhost/
+    description: DEV Server
+    variables: { }
+  - url: https://jenesaispas/
+    description: Azure Cloud
+    variables: { }
+security:
+  - Authorization: []
+tags:
+  - name: connaissanceclient
+    description: opérations de lecture / écriture sur les fiches de connaissance client
+paths:
+  '/connaissanceClient':
+    get:
+      tags:
+        - connaissanceclient-api-controller
+      summary: Liste des fiches de connaissance client
+      operationId: getConnaissanceClients
+      description: |
+        liste des fiches de connaissance client
+      responses:
+        '201':
+          description: Réponse pour une requête valide
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ConnaissanceClients'
+        400:
+          description: Invalid Request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiErrorResponse'
+        401:
+          description: Access forbidden
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiErrorResponse'
+        403:
+          description: Access denied
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiErrorResponse'
+        409:
+          description: Conflict
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiErrorResponse'
+    post:
+      tags:
+        - connaissanceclient-api-controller
+      summary: Accès en écriture à une fiche de connaissance client
+      operationId: saveConnaissanceClient
+      description: |
+        Ecriture d'une fiche de connaissance client (création ou mise à jour).
+      responses:
+        '201':
+          description: Réponse pour une requête valide (création ou mise à jour d'une fiche de connaissance client)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ConnaissanceClient'
+        400:
+          description: Invalid Request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiErrorResponse'
+        401:
+          description: Access forbidden
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiErrorResponse'
+        403:
+          description: Access denied
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiErrorResponse'
+        409:
+          description: Conflict
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiErrorResponse'
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ConnaissanceClient'
+        description: La fiche de connaissance client à enregister
+  '/connaissanceClientAS':
+    post:
+      tags:
+        - connaissanceclient-api-controller
+      summary: Accès en écriture à une fiche de connaissance client
+      operationId: saveConnaissanceClientAsync
+      description: |
+        Ecriture d'une fiche de connaissance client en assynchrone.
+      responses:
+        '202':
+          description: Réponse pour une requête valide (création ou mise à jour d'une fiche de connaissance client)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiErrorResponse'
+        400:
+          description: Invalid Request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiErrorResponse'
+        401:
+          description: Access forbidden
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiErrorResponse'
+        403:
+          description: Access denied
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiErrorResponse'
+        409:
+          description: Conflict
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiErrorResponse'
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ConnaissanceClient'
+        description: La fiche de connaissance client à enregister
+  '/connaissanceClient/{id}':
+    get:
+      tags:
+        - connaissanceclient-api-controller
+      summary: Accès en lecture à une fiche de connaissance client
+      operationId: getConnaissanceClient
+      description: |
+        Accès à une fiche de connaissance client via son id
+      parameters:
+        - in: path
+          name: id
+          description: identifiant
+          required: true
+          schema:
+            type: string
+            format: sha256
+      responses:
+        '200':
+          description: Réponse pour une requête valide (retour d'une fiche de connaissance client)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ConnaissanceClient'
+        400:
+          description: Invalid Request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiErrorResponse'
+        404:
+          description: Not Found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiErrorResponse'
+        500:
+          description: Unexpected server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiErrorResponse'
+  '/connaissanceClient/{id}/adresse':
+    put:
+      tags:
+        - connaissanceclient-api-controller
+      summary: Changement d'addresse du client
+      operationId: changerAdresse
+      description: |
+        Changement d'addresse du client
+      parameters:
+        - in: path
+          name: id
+          description: identifiant
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Réponse pour une requête valide (retour d'une fiche de connaissance client)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ConnaissanceClient'
+        400:
+          description: Invalid Request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiErrorResponse'
+        404:
+          description: Not Found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiErrorResponse'
+        500:
+          description: Unexpected server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiErrorResponse'
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Adresse'
+  '/connaissanceClient/{id}/situation':
+    put:
+      tags:
+        - connaissanceclient-api-controller
+      summary: Changement d'addresse du client
+      operationId: changerSituation
+      description: |
+        Changement d'addresse du client
+      parameters:
+        - in: path
+          name: id
+          description: identifiant
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Réponse pour une requête valide (retour d'une fiche de connaissance client)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ConnaissanceClient'
+        400:
+          description: Invalid Request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiErrorResponse'
+        404:
+          description: Not Found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiErrorResponse'
+        500:
+          description: Unexpected server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiErrorResponse'
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Situation'
+components:
+  headers:
+    Accept-Version:
+      required: true
+      schema:
+        type: string
+
+  securitySchemes:
+    Authorization:
+      type: apiKey
+      name: Authorization
+      in: header
+  schemas:
+    ApiErrorResponse:
+      type: object
+      properties:
+        status:
+          type: integer
+          format: int32
+        details:
+          type: array
+          items:
+            type: string
+        path:
+          type: string
+    ConnaissanceClients:
+      type: array
+      items:
+        $ref: '#/components/schemas/ConnaissanceClient'
+    ConnaissanceClient:
+      type: object
+      properties:
+        id:
+          type: string
+        nom:
+          type: string
+        prenom:
+          type: string
+        ligne1:
+          type: string
+        ligne2:
+          type: string
+        codePostal:
+          type: string
+        ville:
+          type: string
+        situationFamilialle:
+          type: string
+        nombreEnfants:
+          type: integer
+    Adresse:
+      type: object
+      properties:
+        ligne1:
+          type: string
+        ligne2:
+          type: string
+        codePostal:
+          type: string
+        ville:
+          type: string
+    Situation:
+      type: object
+      properties:
+        situationFamilialle:
+          type: string
+        nombreEnfants:
+          type: integer

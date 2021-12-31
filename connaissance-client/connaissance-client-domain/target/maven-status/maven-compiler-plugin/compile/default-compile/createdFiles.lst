@@ -1,0 +1,7 @@
+com/sqli/workshop/ddd/connaissance/client/domain/interfaces/ConnaissanceClientRepository.class
+com/sqli/workshop/ddd/connaissance/client/domain/interfaces/ConnaissanceClientService.class
+com/sqli/workshop/ddd/connaissance/client/domain/service/ConnaissanceClientServiceImpl.class
+com/sqli/workshop/ddd/connaissance/client/domain/ConnaissanceClient.class
+com/sqli/workshop/ddd/connaissance/client/domain/interfaces/BusRepository.class
+com/sqli/workshop/ddd/connaissance/client/domain/Adresse.class
+com/sqli/workshop/ddd/connaissance/client/domain/enums/SituationFamiliale.class

@@ -1,0 +1,17 @@
+
+G
+java:S1068"'Remove this unused "nom" private field.(À³õåùÿÿÿÿ8Ä­™Ê/
+E
+java:S1068"*Remove this unused "prenom" private field.(Í¤™ì8Ä­™Ê/
+E
+java:S1068"*Remove this unused "ligne1" private field.(ƒ›Ïô8Ä­™Ê/
+D
+java:S1068"*Remove this unused "ligne2" private field.(Ô¸ç8Ä­™Ê/
+N
+java:S1068".Remove this unused "codePostal" private field.(™›˜êıÿÿÿÿ8Ä­™Ê/
+C
+java:S1068")Remove this unused "ville" private field.(³µÁ8Ä­™Ê/
+V
+java:S1068"6Remove this unused "situationFamiliale" private field.(¨³üûıÿÿÿÿ8Ä­™Ê/
+Q
+java:S1068"1Remove this unused "nombreEnfants" private field.(¹—¡ûüÿÿÿÿ8Ä­™Ê/

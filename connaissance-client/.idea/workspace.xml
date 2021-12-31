@@ -1,0 +1,1123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="77d375c1-023b-4130-90df-49b915e8795e" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/aws.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/7/07db2cda6b121f39fcb41da7708386807e1223f5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/d/7d24d8dddda008f35fc9bfc35c7209bc6c6daacc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/3/b37971c5bd0aebb7dd1f2cabaa9b8a14564e5f56" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/3/c3af6f2c2f46cecea6291d4352a45149fd9c723e" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/connaissance-client-api/src/main/java/com/sqli/workshop/ddd/connaissance/client/api/ConnaissanceClientDelegate.java" beforeDir="false" afterPath="$PROJECT_DIR$/connaissance-client-api/src/main/java/com/sqli/workshop/ddd/connaissance/client/api/ConnaissanceClientDelegate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/connaissance-client-api/src/main/resources/connaissance-client-api.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/connaissance-client-api/src/main/resources/connaissance-client-api.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/connaissance-client-app/src/main/java/com/sqli/workshop/ddd/connaissance/client/ConnaissanceClientApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/connaissance-client-app/src/main/java/com/sqli/workshop/ddd/connaissance/client/ConnaissanceClientApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/connaissance-client-app/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/connaissance-client-app/src/main/resources/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/connaissance-client-domain/src/main/java/com/sqli/workshop/ddd/connaissance/client/domain/interfaces/ConnaissanceClientService.java" beforeDir="false" afterPath="$PROJECT_DIR$/connaissance-client-domain/src/main/java/com/sqli/workshop/ddd/connaissance/client/domain/interfaces/ConnaissanceClientService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/connaissance-client-domain/src/main/java/com/sqli/workshop/ddd/connaissance/client/domain/service/ConnaissanceClientServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/connaissance-client-domain/src/main/java/com/sqli/workshop/ddd/connaissance/client/domain/service/ConnaissanceClientServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/connaissance-client.iml" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/connaissance_client$ConnaissanceClientServiceImplTest.ic" NAME="ConnaissanceClientServiceImplTest Coverage Results" MODIFIED="1615280780484" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.sqli.workshop.ddd.connaissance.client.domain.*</FILTER>
+    </SUITE>
+  </component>
+  <component name="CoverageViewManager">
+    <option name="myElementSize" value="293" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="turbodb.postgres.database.azure.com" type="feb32156:DbDataSourceImpl" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="turbodb.postgres.database.azure.com" type="feb32156:DbDataSourceImpl" />
+        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="turbodb.postgres.database.azure.com" type="feb32156:DbDataSourceImpl" />
+        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="turbo: database" type="162271b6:PgImplModel$Database" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="turbodb.postgres.database.azure.com" type="feb32156:DbDataSourceImpl" />
+        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="turbo: database" type="162271b6:PgImplModel$Database" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="turbodb.postgres.database.azure.com" type="feb32156:DbDataSourceImpl" />
+        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="turbo: database" type="162271b6:PgImplModel$Database" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="public: schema" type="983ebcf7:PgImplModel$Schema" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="turbodb.postgres.database.azure.com" type="feb32156:DbDataSourceImpl" />
+        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="turbo: database" type="162271b6:PgImplModel$Database" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="public: schema" type="983ebcf7:PgImplModel$Schema" />
+        <item name="tables" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="turbodb.postgres.database.azure.com" type="feb32156:DbDataSourceImpl" />
+        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="turbo: database" type="162271b6:PgImplModel$Database" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="public: schema" type="983ebcf7:PgImplModel$Schema" />
+        <item name="tables" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="conaissanceclient: table" type="69fad909:PgImplModel$LocalTable" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>mapstruct</find>
+      <find>logbox</find>
+      <find>fr.</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/connaissance-client-domain/src/main/java/fr/generali/ecg/connaissance/client/domain/enums/SituationFamilialeEnum.java" />
+        <option value="$PROJECT_DIR$/connaissance-client-domain/src/main/java/fr/generali/ecg/connaissance/client/domain/ConnaissanceClient.java" />
+        <option value="$PROJECT_DIR$/connaissance-client-domain/src/main/java/com/sqli/workshop/ddd/connaissance/client/domain/Adresse.java" />
+        <option value="$PROJECT_DIR$/connaissance-client-domain/src/main/java/com/sqli/workshop/ddd/connaissance/client/domain/ConnaissanceClient.java" />
+        <option value="$PROJECT_DIR$/connaissance-client-domain/pom.xml" />
+        <option value="$PROJECT_DIR$/connaissance-client-domain/src/test/com/sqli/workshop/ddd/connaissance/client/domain/ConnaissanceClientServiceImplTest.java" />
+        <option value="$PROJECT_DIR$/connaissance-client-db-port/pom.xml" />
+        <option value="$PROJECT_DIR$/connaissance-client-db-port/src/test/java/com/sqli/workshop/ddd/connaissance/client/db/ConnaissanceClientRepositoryImplTest.java" />
+        <option value="$PROJECT_DIR$/connaissance-client-api/target/generated-sources/src/main/java/com/sqli/workshop/ddd/connaissance/client/generated/api/server/ConnaissanceclientApiController.java" />
+        <option value="$PROJECT_DIR$/connaissance-client-api/src/main/java/com/sqli/workshop/ddd/connaissance/client/api/ConnaissanceClientApiControllerImpl.java" />
+        <option value="$PROJECT_DIR$/connaissance-client-db-port/src/main/java/com/sqli/workshop/ddd/connaissance/client/db/ConnaissanceClientDb.java" />
+        <option value="$PROJECT_DIR$/connaissance-client-app/src/test/java/fr/generali/ecg/connaissance/client/ApplicationTests.java" />
+        <option value="$PROJECT_DIR$/connaissance-client-api/src/main/java/com/sqli/workshop/ddd/connaissance/client/api/config/OpenApiConfig.java" />
+        <option value="$PROJECT_DIR$/connaissance-client-api/pom.xml" />
+        <option value="$PROJECT_DIR$/connaissance-client-app/src/main/java/com/sqli/workshop/ddd/connaissance/client/Application.java" />
+        <option value="$PROJECT_DIR$/connaissance-client-db-port/src/main/java/com/sqli/workshop/ddd/connaissance/client/db/ConnaissanceClientDbRepository.java" />
+        <option value="$PROJECT_DIR$/connaissance-client-db-port/src/test/java/com/sqli/workshop/ddd/connaissance/client/domain/ConnaissanceClientRepositoryImplTest.java" />
+        <option value="$PROJECT_DIR$/connaissance-client-domain/src/main/java/com/sqli/workshop/ddd/connaissance/client/domain/interfaces/BusRepository.java" />
+        <option value="$PROJECT_DIR$/connaissance-client-app/src/main/resources/application.properties" />
+        <option value="$PROJECT_DIR$/connaissance-client-servicebus-port/src/main/java/com/sqli/workshop/ddd/connaissance/client/servicebus/Message.java" />
+        <option value="$PROJECT_DIR$/connaissance-client-servicebus-port/pom.xml" />
+        <option value="$PROJECT_DIR$/connaissance-client-domain/src/test/java/com/sqli/workshop/ddd/connaissance/client/domain/ConnaissanceClientServiceImplTest.java" />
+        <option value="$PROJECT_DIR$/connaissance-client-app/src/main/resources/application.yaml" />
+        <option value="$PROJECT_DIR$/connaissance-client-servicebus-port/src/main/java/com/sqli/workshop/ddd/connaissance/client/servicebus/ServiceBusImpl.java" />
+        <option value="$PROJECT_DIR$/connaissance-client-domain/src/main/java/com/sqli/workshop/ddd/connaissance/client/domain/interfaces/ConnaissanceClientRepository.java" />
+        <option value="$PROJECT_DIR$/connaissance-client-db-port/src/main/java/com/sqli/workshop/ddd/connaissance/client/db/ConnaissanceClientRepositoryImpl.java" />
+        <option value="$PROJECT_DIR$/connaissance-client-api/target/generated-sources/src/main/java/com/sqli/workshop/ddd/connaissance/client/generated/api/server/ConnaissanceClientApi.java" />
+        <option value="$PROJECT_DIR$/connaissance-client-api/src/main/resources/connaissance-client-api.yaml" />
+        <option value="$PROJECT_DIR$/connaissance-client-servicebus-port-in/src/main/java/com/sqli/workshop/ddd/fiscalite/servicebus/ServiceBusController.java" />
+        <option value="$PROJECT_DIR$/connaissance-client-servicebus-port-in/pom.xml" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/connaissance-client-servicebus-port-in/src/main/java/com/sqli/workshop/ddd/MessageFiscalite.java" />
+        <option value="$PROJECT_DIR$/connaissance-client-domain/src/main/java/com/sqli/workshop/ddd/connaissance/client/domain/interfaces/ConnaissanceClientService.java" />
+        <option value="$PROJECT_DIR$/connaissance-client-servicebus-port-in/src/main/java/com/sqli/workshop/ddd/connaissance/client/servicebus/ServiceBusController.java" />
+        <option value="$PROJECT_DIR$/connaissance-client-domain/src/main/java/com/sqli/workshop/ddd/connaissance/client/domain/service/ConnaissanceClientServiceImpl.java" />
+        <option value="$PROJECT_DIR$/connaissance-client-api/src/main/java/com/sqli/workshop/ddd/connaissance/client/api/ConnaissanceClientDelegate.java" />
+        <option value="$PROJECT_DIR$/connaissance-client-app/pom.xml" />
+        <option value="$PROJECT_DIR$/connaissance-client-api/src/main/java/com/sqli/workshop/ddd/connaissance/client/api/config/SwaggerConfig.java" />
+      </list>
+    </option>
+  </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <expand>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="connaissance-client-db-port" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="connaissance-client-db-port" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Plugins" type="7aea1407:MavenProjectsStructure$PluginsNode" />
+        </path>
+      </expand>
+      <select />
+    </treeState>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="y" value="25" />
+    <option name="width" value="1920" />
+    <option name="height" value="1055" />
+  </component>
+  <component name="ProjectId" id="22aGkIT0PAHHJJSpCltfbD1W69f" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="connaissance-client" type="b2602c69:ProjectViewProjectNode" />
+              <item name="connaissance-client" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="connaissance-client" type="b2602c69:ProjectViewProjectNode" />
+              <item name="connaissance-client" type="462c0819:PsiDirectoryNode" />
+              <item name="connaissance-client-api" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="connaissance-client" type="b2602c69:ProjectViewProjectNode" />
+              <item name="connaissance-client" type="462c0819:PsiDirectoryNode" />
+              <item name="connaissance-client-api" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="connaissance-client" type="b2602c69:ProjectViewProjectNode" />
+              <item name="connaissance-client" type="462c0819:PsiDirectoryNode" />
+              <item name="connaissance-client-api" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="connaissance-client" type="b2602c69:ProjectViewProjectNode" />
+              <item name="connaissance-client" type="462c0819:PsiDirectoryNode" />
+              <item name="connaissance-client-api" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="connaissance-client" type="b2602c69:ProjectViewProjectNode" />
+              <item name="connaissance-client" type="462c0819:PsiDirectoryNode" />
+              <item name="connaissance-client-api" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="api" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="connaissance-client" type="b2602c69:ProjectViewProjectNode" />
+              <item name="connaissance-client" type="462c0819:PsiDirectoryNode" />
+              <item name="connaissance-client-api" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="api" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="connaissance-client" type="b2602c69:ProjectViewProjectNode" />
+              <item name="connaissance-client" type="462c0819:PsiDirectoryNode" />
+              <item name="connaissance-client-api" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="connaissance-client" type="b2602c69:ProjectViewProjectNode" />
+              <item name="connaissance-client" type="462c0819:PsiDirectoryNode" />
+              <item name="connaissance-client-app" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="connaissance-client" type="b2602c69:ProjectViewProjectNode" />
+              <item name="connaissance-client" type="462c0819:PsiDirectoryNode" />
+              <item name="connaissance-client-app" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="connaissance-client" type="b2602c69:ProjectViewProjectNode" />
+              <item name="connaissance-client" type="462c0819:PsiDirectoryNode" />
+              <item name="connaissance-client-app" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="connaissance-client" type="b2602c69:ProjectViewProjectNode" />
+              <item name="connaissance-client" type="462c0819:PsiDirectoryNode" />
+              <item name="connaissance-client-app" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="connaissance-client" type="b2602c69:ProjectViewProjectNode" />
+              <item name="connaissance-client" type="462c0819:PsiDirectoryNode" />
+              <item name="connaissance-client-app" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="client" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="connaissance-client" type="b2602c69:ProjectViewProjectNode" />
+              <item name="connaissance-client" type="462c0819:PsiDirectoryNode" />
+              <item name="connaissance-client-app" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="connaissance-client" type="b2602c69:ProjectViewProjectNode" />
+              <item name="connaissance-client" type="462c0819:PsiDirectoryNode" />
+              <item name="connaissance-client-db-port" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="connaissance-client" type="b2602c69:ProjectViewProjectNode" />
+              <item name="connaissance-client" type="462c0819:PsiDirectoryNode" />
+              <item name="connaissance-client-servicebus-port" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="connaissance-client" type="b2602c69:ProjectViewProjectNode" />
+              <item name="connaissance-client" type="462c0819:PsiDirectoryNode" />
+              <item name="connaissance-client-servicebus-port" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="connaissance-client" type="b2602c69:ProjectViewProjectNode" />
+              <item name="connaissance-client" type="462c0819:PsiDirectoryNode" />
+              <item name="connaissance-client-servicebus-port" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="connaissance-client" type="b2602c69:ProjectViewProjectNode" />
+              <item name="connaissance-client" type="462c0819:PsiDirectoryNode" />
+              <item name="connaissance-client-servicebus-port" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="connaissance-client" type="b2602c69:ProjectViewProjectNode" />
+              <item name="connaissance-client" type="462c0819:PsiDirectoryNode" />
+              <item name="connaissance-client-servicebus-port" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="ddd" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="connaissance-client" type="b2602c69:ProjectViewProjectNode" />
+              <item name="connaissance-client" type="462c0819:PsiDirectoryNode" />
+              <item name="connaissance-client-servicebus-port" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="ddd" type="462c0819:PsiDirectoryNode" />
+              <item name="servicebus" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="connaissance-client" type="b2602c69:ProjectViewProjectNode" />
+              <item name="connaissance-client" type="462c0819:PsiDirectoryNode" />
+              <item name="connaissance-client-servicebus-port-in" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="connaissance-client" type="b2602c69:ProjectViewProjectNode" />
+              <item name="connaissance-client" type="462c0819:PsiDirectoryNode" />
+              <item name="connaissance-client-servicebus-port-in" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="connaissance-client" type="b2602c69:ProjectViewProjectNode" />
+              <item name="connaissance-client" type="462c0819:PsiDirectoryNode" />
+              <item name="connaissance-client-servicebus-port-in" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="connaissance-client" type="b2602c69:ProjectViewProjectNode" />
+              <item name="connaissance-client" type="462c0819:PsiDirectoryNode" />
+              <item name="connaissance-client-servicebus-port-in" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="connaissance-client" type="b2602c69:ProjectViewProjectNode" />
+              <item name="connaissance-client" type="462c0819:PsiDirectoryNode" />
+              <item name="connaissance-client-servicebus-port-in" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="ddd" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="connaissance-client" type="b2602c69:ProjectViewProjectNode" />
+              <item name="connaissance-client" type="462c0819:PsiDirectoryNode" />
+              <item name="connaissance-client-servicebus-port-in" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="ddd" type="462c0819:PsiDirectoryNode" />
+              <item name="servicebus" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="postgresql" />
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1615912660468" />
+    <property name="database.console.LAST_STATE" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.sqli.workshop.ddd" />
+      <recent name="com.sqli.workshop.ddd.connaissance.client.api" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/connaissance-client-app/src/main/resources" />
+      <recent name="$PROJECT_DIR$/connaissance-client-db-port/src" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.sqli.workshop.ddd" />
+      <recent name="com.sqli.workshop.ddd.connaissance.client.servicebus" />
+      <recent name="com.sqli.workshop.ddd.connaissance.client.api.config" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/connaissance-client-db-port/src/test/java" />
+      <recent name="$PROJECT_DIR$/connaissance-client-domain/src/test/java" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Spring Boot.Application">
+    <configuration name="Application" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="fr.generali.ecg.connaissance.client.Application" />
+      <module name="connaissance-client-app" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="fr.generali.ecg.connaissance.client.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ConnaissanceClientRepositoryImplTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="connaissance-client-db-port" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.sqli.workshop.ddd.connaissance.client.domain.db.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.sqli.workshop.ddd.connaissance.client.domain" />
+      <option name="MAIN_CLASS_NAME" value="com.sqli.workshop.ddd.connaissance.client.domain.ConnaissanceClientRepositoryImplTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ConnaissanceClientRepositoryImplTest.given_connaissance_client_not_null_get_should_return_data" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="connaissance-client-db-port" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.sqli.workshop.ddd.connaissance.client.domain.db.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.sqli.workshop.ddd.connaissance.client.domain" />
+      <option name="MAIN_CLASS_NAME" value="com.sqli.workshop.ddd.connaissance.client.domain.ConnaissanceClientRepositoryImplTest" />
+      <option name="METHOD_NAME" value="given_connaissance_client_not_null_get_should_return_data" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ConnaissanceClientServiceImplTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="connaissance-client-domain" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.sqli.workshop.ddd.connaissance.client.domain.db.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.sqli.workshop.ddd.connaissance.client.domain" />
+      <option name="MAIN_CLASS_NAME" value="com.sqli.workshop.ddd.connaissance.client.domain.ConnaissanceClientServiceImplTest" />
+      <option name="METHOD_NAME" value="given_connaissance_client_not_null_should_return_data" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ConnaissanceClientServiceImplTest.given_connaissance_client_not_null_should_return_data" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="connaissance-client-domain" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.sqli.workshop.ddd.connaissance.client.domain.db.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.sqli.workshop.ddd.connaissance.client.domain" />
+      <option name="MAIN_CLASS_NAME" value="com.sqli.workshop.ddd.connaissance.client.domain.ConnaissanceClientServiceImplTest" />
+      <option name="METHOD_NAME" value="given_connaissance_client_not_null_should_return_data" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="connaissance-client [clean,install]" type="MavenRunConfiguration" factoryName="Maven" nameIsGenerated="true">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list>
+                <option value="clean" />
+                <option value="install" />
+              </list>
+            </option>
+            <option name="pomFileName" />
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method v="2" />
+    </configuration>
+    <configuration name="Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="connaissance-client-app" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.sqli.workshop.ddd.connaissance.client.ConnaissanceClientApplication" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.Application" />
+      <item itemvalue="JUnit.ConnaissanceClientServiceImplTest" />
+      <item itemvalue="JUnit.ConnaissanceClientServiceImplTest.given_connaissance_client_not_null_should_return_data" />
+      <item itemvalue="JUnit.ConnaissanceClientRepositoryImplTest.given_connaissance_client_not_null_get_should_return_data" />
+      <item itemvalue="JUnit.ConnaissanceClientRepositoryImplTest" />
+      <item itemvalue="Maven.connaissance-client [clean,install]" />
+      <item itemvalue="Spring Boot.Application" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.ConnaissanceClientRepositoryImplTest" />
+        <item itemvalue="Application.Application" />
+        <item itemvalue="JUnit.ConnaissanceClientRepositoryImplTest.given_connaissance_client_not_null_get_should_return_data" />
+        <item itemvalue="JUnit.ConnaissanceClientServiceImplTest" />
+        <item itemvalue="JUnit.ConnaissanceClientServiceImplTest.given_connaissance_client_not_null_should_return_data" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="77d375c1-023b-4130-90df-49b915e8795e" name="Default Changelist" comment="" />
+      <created>1610519800515</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1610519800515</updated>
+      <workItem from="1610519803643" duration="11876000" />
+      <workItem from="1615276266926" duration="17599000" />
+      <workItem from="1615303477457" duration="24797000" />
+      <workItem from="1615385042909" duration="16258000" />
+      <workItem from="1615822807887" duration="718000" />
+      <workItem from="1615900174367" duration="4907000" />
+      <workItem from="1640068429084" duration="5165000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TestHistory">
+    <history-entry file="ConnaissanceClientServiceImplTest_given_connaissance_client_not_null_should_return_data - 2021.03.09 at 09h 58m 35s.xml">
+      <configuration name="ConnaissanceClientServiceImplTest.given_connaissance_client_not_null_should_return_data" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ConnaissanceClientServiceImplTest - 2021.03.09 at 09h 59m 16s.xml">
+      <configuration name="ConnaissanceClientServiceImplTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ConnaissanceClientServiceImplTest - 2021.03.09 at 09h 59m 29s.xml">
+      <configuration name="ConnaissanceClientServiceImplTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ConnaissanceClientServiceImplTest - 2021.03.09 at 10h 00m 52s.xml">
+      <configuration name="ConnaissanceClientServiceImplTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ConnaissanceClientServiceImplTest - 2021.03.09 at 10h 02m 18s.xml">
+      <configuration name="ConnaissanceClientServiceImplTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ConnaissanceClientServiceImplTest - 2021.03.09 at 10h 06m 21s.xml">
+      <configuration name="ConnaissanceClientServiceImplTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ConnaissanceClientRepositoryImplTest_given_connaissance_client_not_null_get_should_return_data - 2021.03.09 at 11h 35m 31s.xml">
+      <configuration name="ConnaissanceClientRepositoryImplTest.given_connaissance_client_not_null_get_should_return_data" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ConnaissanceClientRepositoryImplTest - 2021.03.09 at 11h 36m 28s.xml">
+      <configuration name="ConnaissanceClientRepositoryImplTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ConnaissanceClientRepositoryImplTest - 2021.03.09 at 16h 48m 21s.xml">
+      <configuration name="ConnaissanceClientRepositoryImplTest" configurationId="JUnit" />
+    </history-entry>
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="76155000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="25" width="1920" height="1055" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Web" order="0" side_tool="true" />
+      <window_info id="CC Monitor" order="1" />
+      <window_info content_ui="combo" id="Project" order="2" visible="true" weight="0.25773746" />
+      <window_info id="Structure" order="3" side_tool="true" weight="0.25" />
+      <window_info id="Designer" order="4" />
+      <window_info id="Capture Tool" order="5" />
+      <window_info id="UI Designer" order="6" />
+      <window_info id="Favorites" order="7" side_tool="true" />
+      <window_info id="Image Layers" order="8" />
+      <window_info anchor="bottom" id="Java Enterprise" order="0" />
+      <window_info anchor="bottom" id="Messages" order="1" weight="0.32937366" />
+      <window_info anchor="bottom" id="Message" order="2" />
+      <window_info anchor="bottom" id="Find" order="3" weight="0.32937366" />
+      <window_info active="true" anchor="bottom" id="Run" order="4" visible="true" weight="0.35421166" />
+      <window_info anchor="bottom" id="Debug" order="5" weight="0.39956802" />
+      <window_info anchor="bottom" id="Cvs" order="6" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="7" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="8" />
+      <window_info anchor="bottom" id="Analysis" order="9" />
+      <window_info anchor="bottom" id="Spring" order="10" />
+      <window_info anchor="bottom" id="Database Console" order="11" visible="true" weight="0.32937366" />
+      <window_info anchor="bottom" id="Terminal" order="12" />
+      <window_info anchor="bottom" id="Docker" order="13" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="14" side_tool="true" />
+      <window_info anchor="bottom" id="SonarLint" order="15" />
+      <window_info anchor="bottom" id="Database Changes" order="16" />
+      <window_info anchor="bottom" id="Version Control" order="17" />
+      <window_info anchor="right" id="Coverage" order="0" sideWeight="0.50402576" side_tool="true" visible="true" weight="0.32977587" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="1" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="2" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="3" weight="0.25" />
+      <window_info anchor="right" id="Maven" order="4" visible="true" weight="0.32977587" />
+      <window_info anchor="right" id="Palette" order="5" />
+      <window_info anchor="right" id="Capture Analysis" order="6" />
+      <window_info anchor="right" id="Snyk" order="7" side_tool="true" />
+      <window_info anchor="right" id="Database" order="8" sideWeight="0.49597424" weight="0.32977587" />
+      <window_info anchor="right" id="Palette&#9;" order="9" />
+      <window_info anchor="right" id="Theme Preview" order="10" />
+      <window_info anchor="right" id="PlantUML" order="11" />
+      <window_info anchor="right" id="Bean Validation" order="12" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/connaissance-client-api/src/main/java/com/sqli/workshop/ddd/connaissance/client/api/ConnaissanceClientDelegate.java</url>
+          <line>40</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/connaissance-client-db-port/src/main/java/com/sqli/workshop/ddd/connaissance/client/db/ConnaissanceClientRepositoryImpl.java</url>
+          <line>30</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/connaissance-client-api/src/main/java/com/sqli/workshop/ddd/connaissance/client/api/ConnaissanceClientDelegate.java</url>
+          <line>51</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/connaissance-client-servicebus-port-in/src/main/java/com/sqli/workshop/ddd/connaissance/client/servicebus/ServiceBusController.java</url>
+          <line>26</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/connaissance-client-api/target/generated-sources/src/main/java/com/sqli/workshop/ddd/connaissance/client/generated/api/model/ApiErrorResponse.java" />
+    <entry file="file://$PROJECT_DIR$/connaissance-client-api/src/main/java/com/sqli/workshop/ddd/connaissance/client/api/ConnaissanceClientApiToDomainMapper.java" />
+    <entry file="file://$PROJECT_DIR$/connaissance-client-api/src/main/java/com/sqli/workshop/ddd/connaissance/client/api/ConnaissanceClientApiControllerImpl.java" />
+    <entry file="file://$PROJECT_DIR$/connaissance-client-api/target/generated-sources/src/main/java/com/sqli/workshop/ddd/connaissance/client/generated/api/model/ApiErrorResponseDto.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/connaissance-client-api/target/generated-sources/src/main/java/com/sqli/workshop/ddd/connaissance/client/generated/api/server/ConnaissanceClientApiDelegate.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="20" column="46" selection-start-line="20" selection-start-column="17" selection-end-line="20" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/connaissance-client-domain/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="8" selection-start-line="5" selection-end-line="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/connaissance-client-app/src/main/java/fr/generali/ecg/connaissance/client/config/SecurityConfig.java" />
+    <entry file="file://$PROJECT_DIR$/connaissance-client-app/src/test/java/fr/generali/ecg/connaissance/client/ApplicationTests.java" />
+    <entry file="file://$PROJECT_DIR$/connaissance-client-api/src/main/java/com/sqli/workshop/ddd/connaissance/client/api/config/OpenApiConfig.java" />
+    <entry file="jar://$MAVEN_REPOSITORY$/fr/generali/cag/logbox/cag-logbox-spring-boot-starter/4.1.1/cag-logbox-spring-boot-starter-4.1.1.jar!/fr/generali/cag/logbox/springboot/SpringBootLogboxProperties.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/fr/generali/cag/logbox/cag-logbox-spring-boot-starter/4.1.1/cag-logbox-spring-boot-starter-4.1.1.jar!/fr/generali/cag/logbox/springboot/LogboxWebAutoConfiguration.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="381">
+          <caret line="74" column="32" selection-start-line="74" selection-start-column="32" selection-end-line="74" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/connaissance-client-app/src/test/resources/application.properties" />
+    <entry file="file://$PROJECT_DIR$/connaissance-client-domain/src/main/java/com/sqli/workshop/ddd/connaissance/client/domain/ConnaissanceClient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="17" column="31" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="31" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-aop/5.2.11.RELEASE/spring-aop-5.2.11.RELEASE.jar!/org/springframework/aop/framework/JdkDynamicAopProxy.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="132" selection-start-line="132" selection-end-line="132" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/tomcat/embed/tomcat-embed-core/9.0.39/tomcat-embed-core-9.0.39.jar!/org/apache/catalina/core/ApplicationFilterChain.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret lean-forward="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/connaissance-client-db-port/src/main/java/com/sqli/workshop/ddd/connaissance/client/db/ConnaissanceClientDb.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/connaissance-client-domain/src/main/java/com/sqli/workshop/ddd/connaissance/client/domain/interfaces/BusRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/connaissance-client-servicebus-port/src/main/java/com/sqli/workshop/ddd/connaissance/client/db/ConnaissanceClientDb.java" />
+    <entry file="file://$PROJECT_DIR$/connaissance-client-app/src/main/resources/application.properties" />
+    <entry file="file://$PROJECT_DIR$/connaissance-client-api/target/generated-sources/src/main/java/com/sqli/workshop/ddd/connaissance/client/generated/api/model/ConnaissanceClientDto.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="14" column="19" selection-start-line="14" selection-start-column="19" selection-end-line="14" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/connaissance-client-servicebus-port/src/main/java/com/sqli/workshop/ddd/Message.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/connaissance-client-servicebus-port/src/test/java/com/sqli/workshop/ddd/connaissance/client/domain/ConnaissanceClientRepositoryImplTest.java" />
+    <entry file="file://$PROJECT_DIR$/connaissance-client-domain/src/test/java/com/sqli/workshop/ddd/connaissance/client/domain/ConnaissanceClientServiceImplTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="250">
+          <caret line="74" selection-start-line="74" selection-end-line="74" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/azure/spring/azure-spring-boot/3.2.0/azure-spring-boot-3.2.0.jar!/com/azure/spring/autoconfigure/jms/AzureServiceBusJMSProperties.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="91">
+          <caret line="19" column="28" selection-start-line="19" selection-start-column="17" selection-end-line="19" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-commons/2.3.5.RELEASE/spring-data-commons-2.3.5.RELEASE.jar!/org/springframework/data/repository/query/QueryByExampleExecutor.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="13" column="17" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-mongodb/3.0.5.RELEASE/spring-data-mongodb-3.0.5.RELEASE.jar!/org/springframework/data/mongodb/repository/MongoRepository.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="15" column="66" selection-start-line="15" selection-start-column="66" selection-end-line="15" selection-end-column="66" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-commons/2.3.5.RELEASE/spring-data-commons-2.3.5.RELEASE.jar!/org/springframework/data/repository/PagingAndSortingRepository.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="12" column="62" selection-start-line="12" selection-start-column="62" selection-end-line="12" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-commons/2.3.5.RELEASE/spring-data-commons-2.3.5.RELEASE.jar!/org/springframework/data/repository/CrudRepository.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="10" column="54" selection-start-line="10" selection-start-column="54" selection-end-line="10" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-commons/2.3.5.RELEASE/spring-data-commons-2.3.5.RELEASE.jar!/org/springframework/data/repository/Repository.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="10" column="27" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/connaissance-client-servicebus-port/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="18" selection-start-line="16" selection-end-line="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/connaissance-client-db-port/src/test/java/com/sqli/workshop/ddd/connaissance/client/domain/ConnaissanceClientRepositoryImplTest.java" />
+    <entry file="file://$PROJECT_DIR$/connaissance-client-db-port/pom.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/connaissance-client-api/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="9" selection-start-line="4" selection-end-line="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/connaissance-client-api/target/generated-sources/src/main/java/com/sqli/workshop/ddd/connaissance/client/generated/api/server/ConnaissanceClientApi.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="42" column="81" selection-start-line="42" selection-start-column="81" selection-end-line="42" selection-end-column="81" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/connaissance-client-domain/src/main/java/com/sqli/workshop/ddd/connaissance/client/domain/interfaces/ConnaissanceClientRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="13" column="37" selection-start-line="13" selection-start-column="37" selection-end-line="13" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-autoconfigure/2.3.6.RELEASE/spring-boot-autoconfigure-2.3.6.RELEASE.jar!/org/springframework/boot/autoconfigure/gson/GsonAutoConfiguration.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="31" column="21" selection-start-line="31" selection-start-column="21" selection-end-line="31" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/connaissance-client-db-port/src/main/java/com/sqli/workshop/ddd/connaissance/client/db/ConnaissanceClientDbRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/connaissance-client-servicebus-port-in/pom.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="662">
+          <caret line="63" column="8" selection-start-line="63" selection-start-column="8" selection-end-line="63" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/connaissance-client-servicebus-port-in/src/main/java/com/sqli/workshop/ddd/MessageFiscalite.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/connaissance-client-domain/src/main/java/com/sqli/workshop/ddd/connaissance/client/domain/interfaces/ConnaissanceClientService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="19" column="37" selection-start-line="19" selection-start-column="37" selection-end-line="19" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/connaissance-client-api/src/main/java/com/sqli/workshop/ddd/connaissance/client/api/ConnaissanceClientDelegate.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="69" column="10" selection-start-line="69" selection-start-column="10" selection-end-line="69" selection-end-column="10" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/connaissance-client-app/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="186">
+          <caret line="31" column="62" selection-start-line="31" selection-start-column="62" selection-end-line="31" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/connaissance-client-api/src/main/resources/connaissance-client-api.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="504">
+          <caret line="241" selection-start-line="236" selection-end-line="241" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/connaissance-client-app/src/main/java/com/sqli/workshop/ddd/connaissance/client/ConnaissanceClientApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/connaissance-client-app/src/main/resources/application.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="5" column="5" selection-end-line="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/connaissance-client-servicebus-port/src/main/java/com/sqli/workshop/ddd/connaissance/client/servicebus/ServiceBusImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/connaissance-client-domain/src/main/java/com/sqli/workshop/ddd/connaissance/client/domain/service/ConnaissanceClientServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="222">
+          <caret line="53" selection-start-line="53" selection-end-line="53" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/connaissance-client-servicebus-port-in/src/main/java/com/sqli/workshop/ddd/connaissance/client/servicebus/ServiceBusController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="468">
+          <caret line="26" selection-start-line="26" selection-end-line="26" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/connaissance-client-db-port/src/main/java/com/sqli/workshop/ddd/connaissance/client/db/ConnaissanceClientRepositoryImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="30" selection-start-line="30" selection-end-line="30" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/connaissance-client-api/src/main/java/com/sqli/workshop/ddd/connaissance/client/api/config/SwaggerConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="28" column="67" selection-start-line="28" selection-start-column="67" selection-end-line="28" selection-end-column="67" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>No facets are configured</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.6</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>connaissance-client</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>Maven: com.fasterxml.jackson.core:jackson-annotations:2.11.3</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>

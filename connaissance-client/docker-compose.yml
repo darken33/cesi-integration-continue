@@ -1,0 +1,14 @@
+validation_code_postal:
+  build: .
+  dockerfile: ./Dockerfile
+  environment:
+    - BACKEND_SERVICE_PROTOCOL=http
+    - BACKEND_SERVICE_HOST=soapui
+    - BACKEND_SERVICE_PORT=8091
+    - VALIDATION_ADRESSE_SOAP_ENDPOINT=mockValidationAdresseSoapBinding
+    - SWAGGER_ENABLED=true
+  ports:
+    - 8095:8080
+  extra_hosts:
+    - soapui:192.168.10.80    
+  hostname: validationcodepostal
