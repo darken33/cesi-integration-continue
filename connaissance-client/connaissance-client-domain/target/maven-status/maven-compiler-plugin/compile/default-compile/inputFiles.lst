@@ -1,7 +1,7 @@
-/home/pbousquet/Workspace/SQLI/Repositories/ws_ddd/demo/connaissance-client/connaissance-client-domain/src/main/java/com/sqli/workshop/ddd/connaissance/client/domain/enums/SituationFamiliale.java
-/home/pbousquet/Workspace/SQLI/Repositories/ws_ddd/demo/connaissance-client/connaissance-client-domain/src/main/java/com/sqli/workshop/ddd/connaissance/client/domain/Adresse.java
-/home/pbousquet/Workspace/SQLI/Repositories/ws_ddd/demo/connaissance-client/connaissance-client-domain/src/main/java/com/sqli/workshop/ddd/connaissance/client/domain/interfaces/BusRepository.java
-/home/pbousquet/Workspace/SQLI/Repositories/ws_ddd/demo/connaissance-client/connaissance-client-domain/src/main/java/com/sqli/workshop/ddd/connaissance/client/domain/ConnaissanceClient.java
-/home/pbousquet/Workspace/SQLI/Repositories/ws_ddd/demo/connaissance-client/connaissance-client-domain/src/main/java/com/sqli/workshop/ddd/connaissance/client/domain/service/ConnaissanceClientServiceImpl.java
-/home/pbousquet/Workspace/SQLI/Repositories/ws_ddd/demo/connaissance-client/connaissance-client-domain/src/main/java/com/sqli/workshop/ddd/connaissance/client/domain/interfaces/ConnaissanceClientService.java
-/home/pbousquet/Workspace/SQLI/Repositories/ws_ddd/demo/connaissance-client/connaissance-client-domain/src/main/java/com/sqli/workshop/ddd/connaissance/client/domain/interfaces/ConnaissanceClientRepository.java
+/home/pbousquet/Workspace/SQLI/Repositories/cesi-integration-continue/connaissance-client/connaissance-client-domain/src/main/java/com/sqli/workshop/ddd/connaissance/client/domain/ConnaissanceClient.java
+/home/pbousquet/Workspace/SQLI/Repositories/cesi-integration-continue/connaissance-client/connaissance-client-domain/src/main/java/com/sqli/workshop/ddd/connaissance/client/domain/enums/SituationFamiliale.java
+/home/pbousquet/Workspace/SQLI/Repositories/cesi-integration-continue/connaissance-client/connaissance-client-domain/src/main/java/com/sqli/workshop/ddd/connaissance/client/domain/service/ConnaissanceClientServiceImpl.java
+/home/pbousquet/Workspace/SQLI/Repositories/cesi-integration-continue/connaissance-client/connaissance-client-domain/src/main/java/com/sqli/workshop/ddd/connaissance/client/domain/interfaces/BusRepository.java
+/home/pbousquet/Workspace/SQLI/Repositories/cesi-integration-continue/connaissance-client/connaissance-client-domain/src/main/java/com/sqli/workshop/ddd/connaissance/client/domain/interfaces/ConnaissanceClientService.java
+/home/pbousquet/Workspace/SQLI/Repositories/cesi-integration-continue/connaissance-client/connaissance-client-domain/src/main/java/com/sqli/workshop/ddd/connaissance/client/domain/interfaces/ConnaissanceClientRepository.java
+/home/pbousquet/Workspace/SQLI/Repositories/cesi-integration-continue/connaissance-client/connaissance-client-domain/src/main/java/com/sqli/workshop/ddd/connaissance/client/domain/Adresse.java

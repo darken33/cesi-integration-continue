@@ -1,0 +1,10 @@
+com/sqli/pbousquet/testapi/config/SwaggerConfig.class
+com/sqli/pbousquet/testapi/api/HelloApi.class
+com/sqli/pbousquet/testapi/dto/HelloDto.class
+com/sqli/pbousquet/testapi/TestAPIApplication.class
+com/sqli/pbousquet/testapi/api/GoodbyeApi.class
+com/sqli/pbousquet/testapi/api/impl/HelloApiImpl.class
+com/sqli/pbousquet/testapi/config/SwaggerConfig$1.class
+com/sqli/pbousquet/testapi/api/ApiUtil.class
+com/sqli/pbousquet/testapi/api/impl/GoodbyeApiImpl.class
+com/sqli/pbousquet/testapi/dto/GoodbyeDto.class

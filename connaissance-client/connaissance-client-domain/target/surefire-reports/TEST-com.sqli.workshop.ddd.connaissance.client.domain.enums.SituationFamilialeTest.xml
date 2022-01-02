@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="3" failures="0" name="com.sqli.workshop.ddd.connaissance.client.domain.enums.SituationFamilialeTest" time="0.007" errors="0" skipped="0">
+<testsuite tests="3" failures="0" name="com.sqli.workshop.ddd.connaissance.client.domain.enums.SituationFamilialeTest" time="0.012" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
     <property name="java.vm.version" value="11.0.13+8-Ubuntu-0ubuntu1.20.04"/>
     <property name="sun.boot.library.path" value="/usr/lib/jvm/java-11-openjdk-amd64/lib"/>
-    <property name="maven.multiModuleProjectDirectory" value="/home/pbousquet/Workspace/SQLI/Repositories/ws_ddd/demo/connaissance-client"/>
+    <property name="maven.multiModuleProjectDirectory" value="/home/pbousquet/Workspace/SQLI/Repositories/cesi-integration-continue/connaissance-client"/>
     <property name="java.vm.vendor" value="Ubuntu"/>
     <property name="java.vendor.url" value="https://ubuntu.com/"/>
     <property name="guice.disable.misplaced.annotation.check" value="true"/>
@@ -14,7 +14,7 @@
     <property name="user.country" value="US"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
-    <property name="user.dir" value="/home/pbousquet/Workspace/SQLI/Repositories/ws_ddd/demo/connaissance-client"/>
+    <property name="user.dir" value="/home/pbousquet/Workspace/SQLI/Repositories/cesi-integration-continue/connaissance-client"/>
     <property name="java.vm.compressedOopsMode" value="Zero based"/>
     <property name="java.runtime.version" value="11.0.13+8-Ubuntu-0ubuntu1.20.04"/>
     <property name="java.awt.graphicsenv" value="sun.awt.X11GraphicsEnvironment"/>
@@ -46,13 +46,14 @@
     <property name="java.class.path" value="/home/pbousquet/Applications/apache-maven-3.8.3/boot/plexus-classworlds-2.6.0.jar"/>
     <property name="java.vm.specification.version" value="11"/>
     <property name="sun.arch.data.model" value="64"/>
-    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher clean package sonar:sonar -Dsonar.projectKey=connaissance-client -Dsonar.host.url=http://0.0.0.0:9000 -Dsonar.login=b4cb1c93049a86b027562f0fe273dd4303d1acb6"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher clean package jacoco:report dependency-check:check sonar:sonar -Dsonar.projectKey=connaissance-client -Dsonar.host.url=http://0.0.0.0:9000 -Dsonar.login=b4cb1c93049a86b027562f0fe273dd4303d1acb6"/>
     <property name="java.home" value="/usr/lib/jvm/java-11-openjdk-amd64"/>
     <property name="user.language" value="en"/>
     <property name="java.specification.vendor" value="Oracle Corporation"/>
     <property name="awt.toolkit" value="sun.awt.X11.XToolkit"/>
     <property name="java.vm.info" value="mixed mode, sharing"/>
     <property name="java.version" value="11.0.13"/>
+    <property name="securerandom.source" value="file:/dev/./urandom"/>
     <property name="java.vendor" value="Ubuntu"/>
     <property name="maven.home" value="/home/pbousquet/Applications/apache-maven-3.8.3"/>
     <property name="file.separator" value="/"/>
@@ -65,5 +66,5 @@
   </properties>
   <testcase classname="com.sqli.workshop.ddd.connaissance.client.domain.enums.SituationFamilialeTest" name="given_value_2_enum_is_MARIE" time="0"/>
   <testcase classname="com.sqli.workshop.ddd.connaissance.client.domain.enums.SituationFamilialeTest" name="given_value_1_enum_is_CELIBATAIRE" time="0"/>
-  <testcase classname="com.sqli.workshop.ddd.connaissance.client.domain.enums.SituationFamilialeTest" name="given_value_3_enum_throws_exception" time="0.007"/>
+  <testcase classname="com.sqli.workshop.ddd.connaissance.client.domain.enums.SituationFamilialeTest" name="given_value_3_enum_throws_exception" time="0.012"/>
 </testsuite>

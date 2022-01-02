@@ -1,0 +1,59 @@
+node() {
+
+    stage('CLEAN WORKSPACE') {
+        sh "rm -rf ${workspace}/*"
+    }
+
+    stage('CHECKOUT') {
+        if (workingBranch == null || "" == workingBranch) {
+            workingBranch = 'master'
+        }
+        git branch: "${workingBranch}", url: "http://192.168.99.109:8082/root/hello-api.git"
+    }
+
+    stage('MAVEN BUILD') {
+        sh "mvn clean compile"
+    }
+
+    stage('TEST PACKAGING') {
+        sh "mvn package"
+    }
+
+    stage('ANALYSE SONAR') {
+        sh "mvn sonar:sonar " +
+            "-Dsonar.host.url=http://192.168.99.109:9000 " +
+            "-Dsonar.login=42a5cb4ee32a2fed5f677b21be44c99c4614b868"
+    }
+
+    def timestamp = new Date().format('yyyyMMddHHmmss')
+
+    stage('UPLOAD S3') {
+        sh "aws s3 " +
+           "cp ${workspace}/target/testapi-0.0.5-SNAPSHOT.jar " +
+           "s3://elasticbeanstalk-eu-west-1-588272595007/hello-api.${timestamp}.jar"
+    }
+
+    stage('VERSION APP') {
+        sh "aws elasticbeanstalk create-application-version --application-name hello-api " +
+           "--version-label hello-api-${timestamp} " +
+           "--source-bundle S3Bucket=\"elasticbeanstalk-eu-west-1-588272595007\",S3Key=\"hello-api.${timestamp}.jar\" " +
+           "--no-auto-create-application --process"
+    }
+
+    stage('DEPLOIEMENT ELB') {
+        sh "aws elasticbeanstalk  update-environment --environment-name Helloapi-env " +
+           "--version-label hello-api-${timestamp}"
+    }
+    
+    stage('TEST API') {
+        sh '''#!/bin/bash
+              sleep 60
+              http_response=$(curl -s -o /dev/null -w "%{http_code}" -X GET "http://helloapi-env.eba-dv8ffvvn.eu-west-1.elasticbeanstalk.com/api/v1/hello" -H  "accept: application/json")
+              if [ $http_response != "200" ]; then
+                  echo "erreur $http_response sur GET http://helloapi-env.eba-dv8ffvvn.eu-west-1.elasticbeanstalk.com/api/v1/hello"
+                  exit 1
+              fi
+        '''
+    }
+
+}
