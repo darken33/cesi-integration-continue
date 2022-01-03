@@ -29,17 +29,7 @@
         </dependency>
         <dependency>
             <groupId>com.sqli.workshop.ddd</groupId>
-            <artifactId>connaissance-client-servicebus-port-in</artifactId>
-            <version>1.0.0-SNAPSHOT</version>
-        </dependency>
-        <dependency>
-            <groupId>com.sqli.workshop.ddd</groupId>
             <artifactId>connaissance-client-db-port</artifactId>
-            <version>1.0.0-SNAPSHOT</version>
-        </dependency>
-        <dependency>
-            <groupId>com.sqli.workshop.ddd</groupId>
-            <artifactId>connaissance-client-servicebus-port</artifactId>
             <version>1.0.0-SNAPSHOT</version>
         </dependency>
         <dependency>
@@ -73,11 +63,6 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-mongodb</artifactId>
             <version>${spring.boot.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>com.azure.spring</groupId>
-            <artifactId>azure-spring-boot-starter-servicebus-jms</artifactId>
-            <version>3.2.0</version>
         </dependency>
 
         <!-- tests -->

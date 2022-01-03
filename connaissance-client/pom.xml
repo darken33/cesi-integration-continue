@@ -102,8 +102,6 @@
 	<modules>
 	  <module>connaissance-client-domain</module>
 	  <module>connaissance-client-db-port</module>
-	  <module>connaissance-client-servicebus-port</module>
-		<module>connaissance-client-servicebus-port-in</module>
 	  <module>connaissance-client-api</module>
 	  <module>connaissance-client-app</module>
     </modules>

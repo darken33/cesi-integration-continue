@@ -8,10 +8,8 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="connaissance-client-app" />
-        <module name="connaissance-client-servicebus-port-in" />
         <module name="connaissance-client-api" />
         <module name="connaissance-client-domain" />
-        <module name="connaissance-client-servicebus-port" />
         <module name="connaissance-client-db-port" />
       </profile>
     </annotationProcessing>

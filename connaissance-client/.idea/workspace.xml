@@ -5,22 +5,55 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="77d375c1-023b-4130-90df-49b915e8795e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/aws.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/7/07db2cda6b121f39fcb41da7708386807e1223f5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/e/3e6592b4a45b197772d9983e71252bd80209f1bd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/4/442292b8a7efeabbe4cc176709b833b1792140ec" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/d/7d24d8dddda008f35fc9bfc35c7209bc6c6daacc" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/3/b37971c5bd0aebb7dd1f2cabaa9b8a14564e5f56" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/e/bed76aca2aa0a315b8e28ddd355fd4d2b72bb01f" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/3/c3af6f2c2f46cecea6291d4352a45149fd9c723e" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/f/cfc76a873939d0d43795bf3f9eeabd46fedbf4d3" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/connaissance-client-api/src/main/java/com/sqli/workshop/ddd/connaissance/client/api/ConnaissanceClientDelegate.java" beforeDir="false" afterPath="$PROJECT_DIR$/connaissance-client-api/src/main/java/com/sqli/workshop/ddd/connaissance/client/api/ConnaissanceClientDelegate.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/connaissance-client-api/src/main/resources/connaissance-client-api.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/connaissance-client-api/src/main/resources/connaissance-client-api.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/connaissance-client-app/src/main/java/com/sqli/workshop/ddd/connaissance/client/ConnaissanceClientApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/connaissance-client-app/src/main/java/com/sqli/workshop/ddd/connaissance/client/ConnaissanceClientApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/connaissance-client-api/connaissance-client-api.iml" beforeDir="false" afterPath="$PROJECT_DIR$/connaissance-client-api/connaissance-client-api.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/connaissance-client-app/connaissance-client-app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/connaissance-client-app/connaissance-client-app.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/connaissance-client-app/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/connaissance-client-app/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/connaissance-client-app/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/connaissance-client-app/src/main/resources/application.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/connaissance-client-domain/src/main/java/com/sqli/workshop/ddd/connaissance/client/domain/interfaces/ConnaissanceClientService.java" beforeDir="false" afterPath="$PROJECT_DIR$/connaissance-client-domain/src/main/java/com/sqli/workshop/ddd/connaissance/client/domain/interfaces/ConnaissanceClientService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/connaissance-client-domain/src/main/java/com/sqli/workshop/ddd/connaissance/client/domain/interfaces/BusRepository.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/connaissance-client-domain/src/main/java/com/sqli/workshop/ddd/connaissance/client/domain/service/ConnaissanceClientServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/connaissance-client-domain/src/main/java/com/sqli/workshop/ddd/connaissance/client/domain/service/ConnaissanceClientServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/connaissance-client.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/connaissance-client-domain/src/test/java/com/sqli/workshop/ddd/connaissance/client/domain/service/ConnaissanceClientServiceImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/connaissance-client-domain/src/test/java/com/sqli/workshop/ddd/connaissance/client/domain/service/ConnaissanceClientServiceImplTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/connaissance-client-domain/target/classes/com/sqli/workshop/ddd/connaissance/client/domain/interfaces/BusRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/connaissance-client-domain/target/classes/com/sqli/workshop/ddd/connaissance/client/domain/service/ConnaissanceClientServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/connaissance-client-domain/target/classes/com/sqli/workshop/ddd/connaissance/client/domain/service/ConnaissanceClientServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/connaissance-client-domain/target/connaissance-client-domain-1.0.0-SNAPSHOT.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/connaissance-client-domain/target/dependency-check-report.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/connaissance-client-domain/target/dependency-check-report.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/connaissance-client-domain/target/jacoco.exec" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/connaissance-client-domain/target/maven-archiver/pom.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/connaissance-client-domain/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/connaissance-client-domain/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/connaissance-client-domain/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/connaissance-client-domain/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/connaissance-client-domain/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/connaissance-client-domain/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/connaissance-client-domain/target/site/jacoco/jacoco.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/connaissance-client-domain/target/surefire-reports/TEST-com.sqli.workshop.ddd.connaissance.client.domain.AdresseTest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/connaissance-client-domain/target/surefire-reports/TEST-com.sqli.workshop.ddd.connaissance.client.domain.ConnaissanceClientTest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/connaissance-client-domain/target/surefire-reports/TEST-com.sqli.workshop.ddd.connaissance.client.domain.enums.SituationFamilialeTest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/connaissance-client-domain/target/surefire-reports/TEST-com.sqli.workshop.ddd.connaissance.client.domain.service.ConnaissanceClientServiceImplTest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/connaissance-client-domain/target/surefire-reports/com.sqli.workshop.ddd.connaissance.client.domain.AdresseTest.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/connaissance-client-domain/target/surefire-reports/com.sqli.workshop.ddd.connaissance.client.domain.ConnaissanceClientTest.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/connaissance-client-domain/target/surefire-reports/com.sqli.workshop.ddd.connaissance.client.domain.enums.SituationFamilialeTest.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/connaissance-client-domain/target/surefire-reports/com.sqli.workshop.ddd.connaissance.client.domain.service.ConnaissanceClientServiceImplTest.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/connaissance-client-domain/target/test-classes/com/sqli/workshop/ddd/connaissance/client/domain/AdresseTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/connaissance-client-domain/target/test-classes/com/sqli/workshop/ddd/connaissance/client/domain/ConnaissanceClientTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/connaissance-client-domain/target/test-classes/com/sqli/workshop/ddd/connaissance/client/domain/enums/SituationFamilialeTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/connaissance-client-domain/target/test-classes/com/sqli/workshop/ddd/connaissance/client/domain/service/ConnaissanceClientServiceImplTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/dependency-check-report.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/dependency-check-report.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/dependency-check-report.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/dependency-check-report.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/sonar/.sonar_lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/sonar/report-task.txt" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -115,7 +148,7 @@
     </findStrings>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -438,7 +471,7 @@
       <recent name="$PROJECT_DIR$/connaissance-client-domain/src/test/java" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.Application">
+  <component name="RunManager" selected="Maven.connaissance-client [clean,install]">
     <configuration name="Application" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="fr.generali.ecg.connaissance.client.Application" />
       <module name="connaissance-client-app" />
@@ -452,13 +485,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="class" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -597,6 +632,7 @@
       <workItem from="1615822807887" duration="718000" />
       <workItem from="1615900174367" duration="4907000" />
       <workItem from="1640068429084" duration="5165000" />
+      <workItem from="1641191096993" duration="384000" />
     </task>
     <servers />
   </component>
@@ -691,6 +727,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

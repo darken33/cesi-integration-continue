@@ -4,14 +4,11 @@ package com.sqli.workshop.ddd.connaissance.client.domain.service;
 import com.sqli.workshop.ddd.connaissance.client.domain.Adresse;
 import com.sqli.workshop.ddd.connaissance.client.domain.ConnaissanceClient;
 import com.sqli.workshop.ddd.connaissance.client.domain.enums.SituationFamiliale;
-import com.sqli.workshop.ddd.connaissance.client.domain.interfaces.BusRepository;
 import com.sqli.workshop.ddd.connaissance.client.domain.interfaces.ConnaissanceClientRepository;
 import com.sqli.workshop.ddd.connaissance.client.domain.interfaces.ConnaissanceClientService;
 import org.junit.Before;
 import org.junit.Test;
-import org.junit.runner.RunWith;
 import org.mockito.invocation.InvocationOnMock;
-import org.springframework.test.context.junit4.SpringRunner;
 
 import java.util.*;
 
@@ -25,8 +22,6 @@ public class ConnaissanceClientServiceImplTest {
 
  private ConnaissanceClientRepository repository;
 
- private BusRepository bus;
-
   private static Object answer(InvocationOnMock invocationOnMock) {
     return invocationOnMock.getArgument(0);
   }
@@ -34,8 +29,7 @@ public class ConnaissanceClientServiceImplTest {
   @Before
  public void init() {
    this.repository = mock(ConnaissanceClientRepository.class);
-   this.bus = mock(BusRepository.class);
-   this.service = new ConnaissanceClientServiceImpl(repository, bus);
+   this.service = new ConnaissanceClientServiceImpl(repository);
  }
 
  @Test
@@ -89,7 +83,6 @@ public class ConnaissanceClientServiceImplTest {
     ConnaissanceClient result = service.nouveauClient(ccToSave);
     // THEN
     verify(repository).save(any(ConnaissanceClient.class));
-    verify(bus).sendEvent(any(ConnaissanceClient.class));
     assertNotNull(result.getId());
     assertEquals("BOUSQUET", result.getNom());
     assertEquals("Philippe", result.getPrenom());
@@ -118,7 +111,6 @@ public class ConnaissanceClientServiceImplTest {
     assertEquals("lg1", result.get().getAdresse().getLigne1());
     verify(repository).findById(any(String.class));
     verify(repository).save(any(ConnaissanceClient.class));
-    verify(bus).sendEvent(any(ConnaissanceClient.class));
   }
 
   @Test
@@ -137,7 +129,6 @@ public class ConnaissanceClientServiceImplTest {
     assertTrue(result.get().getAdresse().getLigne2().isEmpty());
     verify(repository).findById(any());
     verify(repository).save(any(ConnaissanceClient.class));
-    verifyNoInteractions(bus);
   }
 
   @Test
@@ -152,7 +143,6 @@ public class ConnaissanceClientServiceImplTest {
     assertEquals(SituationFamiliale.MARIE, result.get().getSituationFamiliale());
     verify(repository).findById(any());
     verify(repository).save(any(ConnaissanceClient.class));
-    verify(bus).sendEvent(any());
   }
 
   @Test
@@ -165,7 +155,6 @@ public class ConnaissanceClientServiceImplTest {
     assertTrue(result.isEmpty());
     verify(repository).findById(any());
     verifyNoMoreInteractions(repository);
-    verifyNoInteractions(bus);
   }
 
   @Test
@@ -196,7 +185,6 @@ public class ConnaissanceClientServiceImplTest {
     service.nouveauClient(ccToSave);
     // THEN
     verify(repository).save(any());
-    verify(bus).sendEvent(any());
   }
 */
 }

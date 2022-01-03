@@ -7,8 +7,6 @@
       <module fileurl="file://$PROJECT_DIR$/connaissance-client-app/connaissance-client-app.iml" filepath="$PROJECT_DIR$/connaissance-client-app/connaissance-client-app.iml" />
       <module fileurl="file://$PROJECT_DIR$/connaissance-client-db-port/connaissance-client-db-port.iml" filepath="$PROJECT_DIR$/connaissance-client-db-port/connaissance-client-db-port.iml" />
       <module fileurl="file://$PROJECT_DIR$/connaissance-client-domain/connaissance-client-domain.iml" filepath="$PROJECT_DIR$/connaissance-client-domain/connaissance-client-domain.iml" />
-      <module fileurl="file://$PROJECT_DIR$/connaissance-client-servicebus-port/connaissance-client-servicebus-port.iml" filepath="$PROJECT_DIR$/connaissance-client-servicebus-port/connaissance-client-servicebus-port.iml" />
-      <module fileurl="file://$PROJECT_DIR$/connaissance-client-servicebus-port-in/connaissance-client-servicebus-port-in.iml" filepath="$PROJECT_DIR$/connaissance-client-servicebus-port-in/connaissance-client-servicebus-port-in.iml" />
     </modules>
   </component>
 </project>

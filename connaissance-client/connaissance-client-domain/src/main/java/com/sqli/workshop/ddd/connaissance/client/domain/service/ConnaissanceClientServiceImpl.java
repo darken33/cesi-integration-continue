@@ -7,7 +7,6 @@ import javax.validation.constraints.NotNull;
 
 import com.sqli.workshop.ddd.connaissance.client.domain.Adresse;
 import com.sqli.workshop.ddd.connaissance.client.domain.enums.SituationFamiliale;
-import com.sqli.workshop.ddd.connaissance.client.domain.interfaces.BusRepository;
 import lombok.AllArgsConstructor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -26,8 +25,6 @@ public class ConnaissanceClientServiceImpl implements ConnaissanceClientService 
 
     private final ConnaissanceClientRepository repository;
 
-    private final BusRepository bus;
-
     public List<ConnaissanceClient> listerClients() {
         return repository.findAll();
     }
@@ -38,15 +35,8 @@ public class ConnaissanceClientServiceImpl implements ConnaissanceClientService 
     }
 
     public ConnaissanceClient nouveauClient(ConnaissanceClient connaissanceClient) {
-        try {
-            Thread.sleep(2000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
         connaissanceClient.setNom(connaissanceClient.getNom().toUpperCase());
         ConnaissanceClient result = repository.save(connaissanceClient);
-        //ConnaissanceClient result = repository.save(null);
-        bus.sendEvent(result);
         return result;
     }
 
@@ -60,7 +50,6 @@ public class ConnaissanceClientServiceImpl implements ConnaissanceClientService 
         if (connaissanceClient.isPresent()) {
             connaissanceClient.get().setAdresse(adresse);
             result = repository.save(connaissanceClient.get());
-            if (sendEvent.booleanValue()) bus.sendEvent(result);
         }
         return Optional.ofNullable(result);
     }
@@ -72,7 +61,6 @@ public class ConnaissanceClientServiceImpl implements ConnaissanceClientService 
             connaissanceClient.get().setSituationFamiliale(situationFamiliale);
             connaissanceClient.get().setNombreEnfants(nombreEnfants);
             result = repository.save(connaissanceClient.get());
-            bus.sendEvent(result);
         }
         return Optional.ofNullable(result);
     }

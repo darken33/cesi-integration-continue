@@ -6,7 +6,3 @@ spring:
       database: admin
       repositories:
         type: none
-  jms:
-    servicebus:
-      connection-string: Endpoint=sb://mydefault.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=Ub4fQtGRsY5BR0BDGFkMdgnLCyIBtOqyYUCG5iyELYc=
-      pricingTier: basic
