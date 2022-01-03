@@ -1,0 +1,20 @@
+= Présentation Jenkins
+:revnumber: 1.0
+:classification: C0 - Public
+
+Philippe Bousquet <pbousquet@sqli.com>
+
+include::headers.adoc[]
+
+== image:images/menu.png[]
+. Installation 
+. Administration
+. Les pipelines
+
+include::chapitre-introduction.adoc[leveloffset=1]
+
+include::chapitre-administration.adoc[leveloffset=1]
+
+include::chapitre-pipelines.adoc[leveloffset=1]
+
+include::chapitre-conclusion.adoc[leveloffset=1]

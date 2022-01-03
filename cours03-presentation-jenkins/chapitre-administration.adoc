@@ -1,0 +1,77 @@
+= Jenkins : Administration
+
+== Se logger en tant qu'admin
+
+En se connectant en tant qu'admin vous allez pouvoir avoir acces à la console d'administration
+
+image:images/jenkins-notifications.png[width=640]
+
+Vous pouvez égalemet remarquer en haut à droites les notifications importantes
+
+== La console d'administration
+
+Cette console permet de configurer l'ensemble de l'outil
+
+image:images/jenkins-manage.png[width=480]
+
+== Configuration Générale
+
+Deux pages sont pour la configuration globale, ici la page de configuration du système 
+
+image:images/jenkins-configure.png[width=512]
+
+== Configuration Générale
+
+Et la configuration globale des outils annexes (jdk, maven, git)
+
+image:images/jenkins-tools.png[width=512]
+
+== Configuration des Plugins
+
+Cette pages est relativement importante puisqu'elle vous permettra de gérer vos différents plugins
+
+image:images/jenkins-plugins2.png[width=640]
+
+== Pluggins
+
+Afin de vous aider lors de la finalisation de l'installation de Jenkins il vous proposera d'installer les plugins courants
+
+image:images/jenkins-plugins.png[width=512]
+
+IMPORTANT: Veillez à garder vos pluggins le plus à jour possible
+
+== Configuration des Agents
+
+Jenkins est censé déléguer la gestion des jobs à des agents cette page vous permettra de configurer des nodes (nécessite des serveurs)
+
+image:images/jenkins-nodes.png[width=640]
+
+== Utilisateur
+
+Vous pouvez gérer vos utilisateurs au travers de la page *Manage users*
+
+image:images/jenkins-users.png[width=640]
+
+== Nouvel utilisateur
+
+Vous pouvez alors créer un nouvel utilisateur
+
+image:images/jenkins-create-user.png[width=640]
+
+== Sécurité
+
+Cette page vous permet de gérer ce que peuvent faire vos utilisateurs.
+
+image:images/jenkins-security.png[width=640]
+
+== Crédentials
+
+Cette page vous permet de gérer les crédentials que vous utiliserez dans vos pipelines (user git, user aws, ...).
+
+image:images/jenkins-credentials.png[width=640]
+
+== Monitoring
+
+Enfin jenkins proposes plusieurs page pour monitorer le systemes, par exemple ici la pages des logs de jenkins.
+
+image:images/jenkins-logs.png[width=640]
