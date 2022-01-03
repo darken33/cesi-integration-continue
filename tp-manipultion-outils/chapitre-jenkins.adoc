@@ -1,0 +1,55 @@
+= §3. J'automatise
+image::images/keep-calm-and-automate.png[height=300]
+
+== Jenkins
+image:images/jenkins.png[width=150] image:images/job-list.png[width=500]
+
+Executeur de Jobs...
+
+== ou plutôt 
+
+image:images/jenkins-master-agents.png[height=300]
+
+Un chef d'orchestre  qui délègue le job à des agents 
+
+== L'Infrastructure 
+image::diagrams/archi.png[height=500]
+
+== Jenkinsfile - 1er Pipeline de build
+
+[source, groovy]
+----
+pipeline {
+  agent { node { label "slave-docker"} }
+  stages {
+    stage("BUILD") {
+      steps {
+        sh "docker run ... maven mvn clean package"
+      }
+    }
+    stage("DEPLOY_WAR") {
+      steps {
+        sh "docker run ... wildfly ... "
+      }
+    }
+    stage("SONAR") {
+      steps {
+        sh "docker run ... sonar-scanner ..."
+      }
+    }
+  }
+}
+----
+image::images/job-stages.png[height=120]
+
+== Un pipeline chez SQLI
+
+image::images/pipeline-sqli.png[]
+
+== Autres outils de CI/CD 
+
+image:images/gitlabci-white.png[width=300] image:images/azuredevops-white.png[width=300] image:images/circleci-white.png[width=300]
+
+== La démo
+
+image:images/dog-computer.png[]

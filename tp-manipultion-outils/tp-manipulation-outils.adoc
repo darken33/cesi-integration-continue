@@ -1,0 +1,33 @@
+= Intégration continue : TPs
+:revnumber: 1.0
+:classification: C0 - Public
+
+Philippe Bousquet <pbousquet@sqli.com>
+
+include::headers.adoc[]
+
+== image:images/menu.png[height=64]
+. Installation d'un serveur Linux
+. Mise en place de Gitlab
+. Mise en place de Jenkins
+. Mise en place de tests automatisés
+. Mise en place de SonarQube
+. Déploiement automatisé dans AWS
+. Test d'acceptance automatisé
+. Autonomie : CI/CD dans Gitlab
+
+include::chapitre-installation.adoc[leveloffset=1]
+
+include::chapitre-gitlab.adoc[leveloffset=1]
+
+// include::chapitre-jenkins.adoc[leveloffset=1]
+
+// include::chapitre-tests-automatises.adoc[leveloffset=1]
+
+// include::chapitre-sonarqube.adoc[leveloffset=1]
+
+// include::chapitre-deploiement.adoc[leveloffset=1]
+
+// include::chapitre-tests-acceptance.adoc[leveloffset=1]
+
+// include::chapitre-gitlab-ci.adoc[leveloffset=1]

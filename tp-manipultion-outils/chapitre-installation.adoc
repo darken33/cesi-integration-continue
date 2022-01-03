@@ -1,0 +1,92 @@
+= Virtual Box : Serveur Linux
+
+== Contexte
+
+Dans l'objectif de ne pas avoir d'impact sur vos postes de travails nous allons effectuer l'ensemble de nos manipulation sur une machine virtuelle de type Serveur Linux tournant sur Virtual Box.
+
+== Image ISO Ubuntu Server
+
+La première étape consiste à récupérer une image ISO de la distribution Ubuntu 21.04 (version Server).
+
+image:images/001-iso-linux.png[width=512]
+
+Vous pourrez la trouver sur : http://www.releases.ubuntu.com/21.04/
+
+== Installer Virtual Box
+
+Il faut alors installer Virtual Box afin de gérer notre future VM.
+
+image:images/002-virtualbox.png[width=512]
+
+Vous pouvez le télécharger sous : https://www.virtualbox.org/wiki/Downloads 
+
+== Créer une nouvelle VM
+
+image:images/003-new-vm.png[width=320]
+
+* name : vm-cesi (ou le nom qu'il vout chante)
+* type : Linux / version : Ubuntu 64 bits
+* mémoire : 4096 MB (4 Go)
+* séléectionner : create a virtual hard disk now
+
+== Créer un disque dur virtuel
+
+image:images/004-vm-create-disk.png[width=480]
+
+* size : 10 GB
+* type : VDI
+* storage : Dynamically allocated
+
+== Démarrage de la VM
+
+image:images/005-vm-choose-linux-iso.png[width=480]
+
+Lors du démarrage, VitrualBox vous demande de sélectionner un image à partir de laquelle démarrer (sélectionner l'image linux téléchargée précédemment)
+
+== Installation de linux server
+
+image:images/006-linux-installation.png[width=400]
+
+Parmis les packages proposez sélectionnez : 
+
+* docker
+* aws cli
+
+== Installation de linux server
+
+image:images/007-linux-install-progress.png[height=550]
+
+== Finalisation de l'installation
+
+Il semble que docker ne soit pas totalement installé, aussi utilisez la commande suivante
+
+[source=bash]
+----
+sudo snap install docker
+----
+
+== Vérification de l'installation
+
+Vérifier la version de linux : 
+[source=bash]
+----
+lsb_release -a
+----
+
+Vérifier la version de aws cli : 
+[source=bash]
+----
+aws --version
+----
+
+Vérifier la version de aws cli : 
+[source=bash]
+----
+sudo docker version
+----
+
+== Naviguer sous linux
+
+Voici un petit guide des commandes principales pour ubuntu : 
+
+https://github.com/darken33/cesi-integration-continue/blob/main/others/davechild_linux-command-line.pdf[linux command line]
