@@ -1,0 +1,77 @@
+== Les difficultés lors de la mise en oeuvre de tests unitaires
+
+* réticences à la mise en oeuvre
+* couverture du code testé
+* temps nécessaire à la rédaction des cas de tests
+* véracité des cas de tests
+* les cas de tests doivent être répétables
+* complexité => base de données, fichiers
+* ...
+
+=== JUnit 4 les annotations
+
+[width="90%",frame="topbot",cols="60,160",options="header"]
+|======================
+|JUnit 4	| La description
+|@BeforeClass | La méthode est exécutée une fois avant le début de tous les tests.
+|@AfterClass | La méthode est exécutée une fois tous les tests joués.
+|======================
+
+=== !
+
+[width="90%",frame="topbot",cols="60,160",options="header"]
+|======================
+|JUnit 4	| La description
+|@Ignore or @Ignore("Why disabled") |Marque que le test doit être désactivé.
+|@Test (expected = Exception.class) |Échec si la méthode ne lance pas l'exception nommée.
+|@Test(timeout=100) |Échoue si la méthode prend plus de 100 millisecondes.
+|======================
+
+=== !
+
+[width="90%",frame="topbot",cols="40,180",options="header"]
+|======================
+|JUnit 4	| La description
+|import org.junit.* | Package pour l'utilisation des annotations.
+|@Test | Identifie une méthode en tant que méthode de test.
+|@Before |Exécuté avant chaque test (identifié par une méthode).
+|@After |Exécuté après chaque test (chaque méthode).
+|======================
+
+=== JUnit 4 les assertions
+
+[width="90%",frame="topbot",cols="60,160",options="header"]
+|======================
+|Déclaration | La description
+|fail([message]) | Laissez la méthode échouer.
+|assertTrue([message,] boolean condition) | Vérifie que la condition booléenne est vraie.
+|======================
+
+=== !
+
+[width="90%",frame="topbot",cols="60,160",options="header"]
+|======================
+|Déclaration | La description
+|assertFalse([message,] boolean condition) | Vérifie que la condition booléenne est fausse.
+|assertEquals([message,] expected, actual) |Teste que deux valeurs sont identiques.
+|assertEquals([message,] expected, actual, tolerance) |Vérifiez des valeurs float ou double.
+|======================
+
+* Besoin de plus de puissance ? utiliser AssertJ ou Hamcrest.
+
+=== CRAFTSMAN RECIPES : SOIGNEZ VOS TU
+
+* Comment donner du sens à vos tests unitaires ?
+** En appliquant certains principes du Behavior Driven Development (BDD)
+* Afin d’obtenir une classe de tests unitaires claire et maintenable.
+* Les tests doivent être
+** compréhensibles, lisibles et facilement modifiables
+** automatisables, répétables et exécutés rapidement
+
+=== TP
+
+ouvrir le PDF https://github.com/darken33/cesi-integration-continue/blob/main/cours04-tests-automatises/exercices/practical-work-junit.pdf[exercices/practical-work-junit.pdf]
+
+image::images/fast-typing-computer.gif[]
+
+C'est à vous ;)

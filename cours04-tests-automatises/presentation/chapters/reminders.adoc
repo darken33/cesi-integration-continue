@@ -1,0 +1,38 @@
+
+== Les types de tests
+
+=== Les tests unitaires
+
+* Les tests unitaires consistent à tester *individuellement* les composants d'une application.
+* On pourra ainsi valider la qualité du code et les performances d'un module.
+
+=== Les tests d'intégration
+
+* Ces tests sont exécutés pour valider l'intégration *des différents modules entre eux* et *dans leur environnement* d'exploitation définitif.
+* Ils permettront de mettre en évidence des problèmes d'interfaces entre différents programmes.
+
+=== Les tests fonctionnels
+
+* Ces tests ont pour but de vérifier la conformité de l'application développée avec le cahier des charges initial.
+* Ils sont donc basés sur les spécifications fonctionnelles et techniques.
+* L'écriture de tests fonctionnels automatisés représente un effort important.
+
+=== Les tests d'acceptation
+
+* Que pouvez-vous accepter pour valider une fonctionnalité ?
+** Conformité des fonctionnalités demandées.
+** Les temps de réponses sont-ils corrects (chargement d'une page HTML, réponse d'une API, ...) ?
+
+=== Les tests de charge et de performance
+
+* Ce sont des tests permettant de mesurer les temps de réponses du système en fonction des sollicitations.
+
+image::images/90-percentile-response-time.png[]
+
+=== Pyramide des tests
+
+image::images/pyramide-testing.png[]
+
+=== Proportions des tests
+
+image::images/reversed-pyramid-testing.png[]

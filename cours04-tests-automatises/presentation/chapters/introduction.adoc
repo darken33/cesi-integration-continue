@@ -1,0 +1,8 @@
+== image:images/menu.png[height=128]
+
+. L’importance des tests
+. Les Types de tests
+. Frameworks de tests
+. L'automatisation
+. Mise en oeuvre
+. Les mocks
