@@ -1,12 +1,12 @@
-= Jenkins : Piplines
+= Jenkins : Pipelines
 
 == Créer un job jenkins
 
-L'lien *New -Item* permet de configurer un nouveau Pipline
+L'lien *New -Item* permet de configurer un nouveau Pipeline
 
-image:images/jenkins-new-item.png[width=640]
+image:images/jenkins-new-item.png[width=512]
 
-Vous aurez alors le choix entre plusieurs options (nous choisirons pipelines)
+Vous aurez alors le choix entre plusieurs options (nous choisirons Pipeline)
 
 == Configuration Génerale
 
@@ -36,23 +36,18 @@ Nous allons maintenant pouvoir définir notre pipeline (en groovy) et celui-ci s
 ----
 node() {
     stage('STAGE1') {
-        step('STEP1') {
-          ...
-        }
+        ...
     }
 
     stage('STAGE2') {
-        step('STEP1') {
-          ...
-        }
-        step('STEP2') {
-          ... 
-        }
+        ...
     }
 }
 ----
 
 == JenkinsFile : Clean
+
+Permet de nettoyer le workspace
 
 [source, groovy]
 ----
@@ -65,7 +60,9 @@ node() {
 }
 ----
 
-== JenkinsFile : Checkout
+== JenkinsFile : Checkout Git
+
+Ici on remarque l'utilisation du paramètre workingBranch
 
 [source, groovy]
 ----
@@ -86,7 +83,7 @@ Via maven installé sur la machine
 [source, groovy]
 ----
 ...
-    stage('MAVEN BUILD') {
+    stage('BUILD/TEST') {
         sh "mvn clean package"
     }
 ...
@@ -98,7 +95,11 @@ Ou via docker
 ----
 ...
     stage('MAVEN BUILD') {
-        sh "mvn clean package"
+        sh "docker run --rm " +
+            "-v ${sqli_pipeline_path}/settings.xml:/root/.m2/settings.xml " +
+            "-v /home/jenkins/.m2/repository:/root/.m2/repository " +
+            "-v ${project_path}:/app " +
+            "maven:3.8.4-jdk-11 clean package -U"
     }
 ...
 ----
@@ -118,9 +119,19 @@ Via maven
 ...
 ----
 
-Ou sonar-scanner
+Ou sonar-scanner (docker) 
 
-== JenkinsFile : Déploiement
+[source, groovy]
+----
+...
+    stage('ANALYSE SONAR') {
+        def scanner = docker.image("sonar-scanner:3.3")
+        scanner.withRun("-v ${project_path}:/data -v ${sqli_pipeline_path}:/config/") { c -> sh "docker logs -f ${c.id}" }
+    }
+...
+----
+
+== JenkinsFile : Déploiement AWS
 
 [source, groovy]
 ----
@@ -164,6 +175,10 @@ Ou sonar-scanner
     }
 ...
 ----
+
+== JenkinsFile : La doc complète
+
+Documentation : https://www.jenkins.io/doc/book/pipeline/ 
 
 == Job Dashboard
 
