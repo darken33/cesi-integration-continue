@@ -20,7 +20,7 @@ include::chapitre-installation.adoc[leveloffset=1]
 
 include::chapitre-gitlab.adoc[leveloffset=1]
 
-// include::chapitre-jenkins.adoc[leveloffset=1]
+include::chapitre-jenkins.adoc[leveloffset=1]
 
 // include::chapitre-tests-automatises.adoc[leveloffset=1]
 

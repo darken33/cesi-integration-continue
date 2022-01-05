@@ -1,55 +1,155 @@
-= §3. J'automatise
-image::images/keep-calm-and-automate.png[height=300]
+= Jenkins
 
-== Jenkins
-image:images/jenkins.png[width=150] image:images/job-list.png[width=500]
+== Contexte
 
-Executeur de Jobs...
+Nous allons installer et manipuler Jenkins.
 
-== ou plutôt 
+== Installation 
 
-image:images/jenkins-master-agents.png[height=300]
+On peut l'installer au travers des paquest officiels
 
-Un chef d'orchestre  qui délègue le job à des agents 
+[source, bash]
+----
+curl -fsSL https://pkg.jenkins.io/debian/jenkins.io.key | sudo tee \
+  /usr/share/keyrings/jenkins-keyring.asc > /dev/null
+echo deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc] \
+  https://pkg.jenkins.io/debian binary/ | sudo tee \
+  /etc/apt/sources.list.d/jenkins.list > /dev/null
+sudo apt-get update
+sudo apt-get install jenkins
+----
 
-== L'Infrastructure 
-image::diagrams/archi.png[height=500]
+== Nécessite Java
 
-== Jenkinsfile - 1er Pipeline de build
+Pour fonctionner Jenkins à besoin de Java
+
+[source, bash]
+----
+sudo apt update
+sudo apt install openjdk-11-jdk
+----
+
+== Débloquer Jenkins
+
+La première chose à faire est de débloquer jenkins (sécurité)
+
+image:images/jenkins-unlock.png[width=512]
+
+== Installer les plugins de base
+
+Afin de vous aider lors de la finalisation de l'installation de Jenkins il vous proposera d'installer les plugins courants
+
+image:images/jenkins-plugins.png[width=512]
+
+== Le Dashboard
+
+image::images/jenkins-dashboard.png[height=500]
+
+== Mise à niveau 
+
+* Vérifier dans la page Manage/Pluggins les mises à jours
+* En cas de mise à jour sélectionner le redémarrage automatique 
+
+== Création d'un nouvel utilisateur
+
+Vous pouvez alors créer un utilisateur
+
+image:images/jenkins-create-user.png[width=640]
+
+== Gestion des droits
+
+Affectez les droits à ce nouvel utilisateurs
+
+image:images/jenkins-security.png[width=640]
+
+* Overall (Read), Job (Build, Cancel, Read, Workspace), View (Read)
+
+== Créer un job
+
+image:images/jenkins-new-item.png[width=640]
+
+* Name : hello-api
+* Type : Pipeline
+
+== !
+
+* Sélectionner parameterised
+* Et ajouter un paramètre workingBranch de type string (valeur par défaut master)
+* Poll SCM : * /5 * * * *
+* Pipeline Script from SCM
+* Repository : http://0.0.0.0:8082/root/hello-api.git 
+* Eventuellement positionner un crédential si le projet n'est pas public
+* Branch Spécifier : */master
+* Script path : jenkinsfile
+
+== Création d'un pipeline
+
+Dans le projet hello-api editer le fichier jenkinsfile
 
 [source, groovy]
 ----
-pipeline {
-  agent { node { label "slave-docker"} }
-  stages {
-    stage("BUILD") {
-      steps {
-        sh "docker run ... maven mvn clean package"
-      }
+node() {
+    stage('STAGE1') {
+        ...
     }
-    stage("DEPLOY_WAR") {
-      steps {
-        sh "docker run ... wildfly ... "
-      }
+
+    stage('STAGE2') {
+        ...
     }
-    stage("SONAR") {
-      steps {
-        sh "docker run ... sonar-scanner ..."
-      }
-    }
-  }
 }
 ----
-image::images/job-stages.png[height=120]
 
-== Un pipeline chez SQLI
+== Ajouter la suppression du workspace
 
-image::images/pipeline-sqli.png[]
+Permet de nettoyer le workspace
 
-== Autres outils de CI/CD 
+[source, groovy]
+----
+...
+    stage('CLEAN WORKSPACE') {
+        sh "echo ##### CLEAN WORKSPACE #####"
+        sh "rm -rf ${workspace}/*"
+    }
+...
+----
 
-image:images/gitlabci-white.png[width=300] image:images/azuredevops-white.png[width=300] image:images/circleci-white.png[width=300]
+== Ajouter le checkout du repo git
 
-== La démo
+Ici on remarque l'utilisation du paramètre workingBranch
 
-image:images/dog-computer.png[]
+[source, groovy]
+----
+...
+    stage('CHECKOUT') {
+        if (workingBranch == null || "" == workingBranch) {
+            workingBranch = 'master'
+        }
+        sh "echo ##### CHECKOUT : ${workingBranch} #####"
+        git branch: "${workingBranch}", url: "http://192.168.99.109:8082/root/hello-api.git"[, credentials: ""]
+    }
+...
+----
+
+== Ajouter le build Maven
+
+On utilise une image docker
+
+[source, groovy]
+----
+...
+    stage('MAVEN BUILD') {
+        sh "docker run --rm " +
+            "-v /home/jenkins/.m2/repository:/root/.m2/repository " +
+            "-v ${project_path}:/app " +
+            "maven:3.8.4-jdk-11 clean package -U"
+    }
+...
+----
+
+== Commiter et Pusher
+
+Le build doit se lancer automatiquement au bout de 5 minutes
+
+== Se connecter à Jenkins
+
+Se connecter avec l'utilisateur créé et vérifier que le job est bien exécuté
