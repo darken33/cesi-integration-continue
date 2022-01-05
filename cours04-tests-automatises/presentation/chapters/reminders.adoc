@@ -23,7 +23,7 @@
 ** Conformité des fonctionnalités demandées.
 ** Les temps de réponses sont-ils corrects (chargement d'une page HTML, réponse d'une API, ...) ?
 
-=== Les tests de charge et de performance
+=== Les tests de charge
 
 * Ce sont des tests permettant de mesurer les temps de réponses du système en fonction des sollicitations.
 

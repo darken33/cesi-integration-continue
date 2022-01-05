@@ -23,6 +23,8 @@ image::images/ci-fire.jpg[]
 ** on se concentre sur les besoins du client ;
 ** mise en place d'un développement itératif (sprints courts de 2/3 semaines) et de l'intégration continue.
 
+=== !
+
 * La méthode XP s'appuie sur :
 ** une forte réactivité au changement des besoins du client ;
 ** un travail d'équipe ;
@@ -34,9 +36,7 @@ image::images/ci-fire.jpg[]
  * Il s'agit d'une technique de conception où le programmeur *écrit d'abord le test* avant de produire le moindre code.
  * Le développeur écrit ensuite le code pour que le test passe.
  * Une fois son test finalisé, il pourra être libre de refactorer autant qu'il le souhaite jusqu'à obtenir un code « propre ». 
-
  * C'est une *idée simple mais complexe* à mettre en oeuvre.
- * Courbe d'apprentissage plus lente de prime abord.
 
 === Pourquoi ces pratiques ?
 
@@ -45,9 +45,8 @@ image::images/ci-fire.jpg[]
 ** Facilité d’écriture des tests avant le code « métier »
 ** Ils servent à promouvoir et vérifier la qualité et la fiabilité du code
 
-* Enfin, jusqu'à une certaine limite !!
-
 image::images/dilbert_tdd.gif[]
+
 === Comment appliquer XP et TDD ?
 
 ** Ecriture d’un test pour une fonctionnalité

@@ -18,13 +18,10 @@ image::images/hexagonal-architecture-example.png[650]
 ** Isolation des autres domaines métier et des autres couches de l’architecture de l’application.
 ** Modèle construit avec un couplage faible avec les autres couches de l’application.
 ** Facilement maintenable, testable et versionnable.
-** Modèle conçu avec le moins de dépendances possibles avec une technologie ou un framework.
 
 === Architecture Hexagonale
 
-« _Permettre à une application d’être pilotée aussi bien par des utilisateurs que par des programmes, des tests automatisés ou des scripts batchs, et d’être développée et testée en isolation de ses éventuels systèmes d’exécution et bases de données._ »
-
-https://en.wikipedia.org/wiki/Alistair_Cockburn[Alistair Cockburn] en 2005 (https://alistair.cockburn.us/hexagonal-architecture/[hexagonal architecture]).
+Défini par https://en.wikipedia.org/wiki/Alistair_Cockburn[Alistair Cockburn] en 2005 (https://alistair.cockburn.us/hexagonal-architecture/[hexagonal architecture]).
 
 * L’architecture hexagonale repose sur trois principes et techniques:
 ** Séparer explicitement la logique métier de la partie exposition (client-side) et persistence (server-side).
@@ -47,6 +44,8 @@ public class MyTestClass {
 
 }
 ....
+
+=== !
 
 * Ou à l’initialisation dans la méthode d'initialisation (ici `setUp()`)
 
@@ -109,8 +108,7 @@ Mockito.when(user.getLogin()).thenThrow(new RuntimeException());
 
 * La différence entre `@Mock` et `@Spy` réside dans le fait que la deuxième permet d’instancier l’objet mocké; on peut ainsi effectuer un mock partiel.
 * Quand on appelle une méthode de l'objet « espionné »
-** la vraie méthode est appelée,
-** à moins qu'un comportement ai été défini.
+** la vraie méthode est appelée, à moins qu'un comportement ai été défini.
 
 ....
 @Spy
