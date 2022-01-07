@@ -22,12 +22,7 @@ include::chapitre-gitlab.adoc[leveloffset=1]
 
 include::chapitre-jenkins.adoc[leveloffset=1]
 
-// include::chapitre-tests-automatises.adoc[leveloffset=1]
+include::chapitre-sonarqube.adoc[leveloffset=1]
 
-// include::chapitre-sonarqube.adoc[leveloffset=1]
+include::chapitre-deploiement.adoc[leveloffset=1]
 
-// include::chapitre-deploiement.adoc[leveloffset=1]
-
-// include::chapitre-tests-acceptance.adoc[leveloffset=1]
-
-// include::chapitre-gitlab-ci.adoc[leveloffset=1]

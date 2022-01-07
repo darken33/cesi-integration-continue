@@ -1,0 +1,38 @@
+= Sonar dans son IDE
+
+== Le plugin Sonarlint
+
+Sonarlint esst un pluggin permettant l'analyse en temps réel du code produit par dun développeur directement dans son ide
+
+image::images/sonarlint.gif[width=800]
+
+== Installer le plugin
+
+Le plugin est disponible pour plusieurs IDE : 
+
+* Eclipse
+* IntelliJ
+* VS Code
+* ...
+
+Retrouver le sur https://www.sonarlint.org/
+
+== Configurer le plugin
+
+* Par default il utilise les indicateurs sonarway
+* On peut cependant le configurer pour qu'il pointe vers SonarQube
+
+image::images/sonarlint-config.png[]
+
+== Analyse sur une classe
+
+image::images/sonarlint-class.png[]
+
+== Génération d'un rapport
+
+image::images/sonarlint-report.png[]
+
+== Code coverage
+
+image::images/ide-code-coverage.png[]
+

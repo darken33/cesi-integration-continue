@@ -1,0 +1,2 @@
+= Merci à tous
+image::images/question.jpg[width="400"]

@@ -1,0 +1,87 @@
+= Déploiement Continue
+
+== Contexte
+
+Nous allons maintenant mettre en place le déploiement automatisé vers AWS
+
+== L'application orignale
+
+Allez sur votre application : http://<trigrame>-helloapi-env.eu-west-1.elasticbeanstalk.com/
+
+image::images/app-original.png[]
+
+== Configurer le client AWS
+
+Il faut maintenant configurer le client AWS pour qu'il puisse déployer sur la souscription, dans /home/jenkis/.aws/
+
+Créer deux fichiers config et credentials
+
+config
+
+[source, bash]
+----
+[default]
+region = eu-west-1
+output = json
+----
+
+credentials
+
+[source, bash]
+----
+[default]
+aws_access_key_id = AKIAYR56HOA72VXNVL75
+aws_secret_access_key = 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
+----
+
+== Configurer le pipeline
+
+[source, bash]
+----
+...
+    def timestamp = new Date().format('yyyyMMddHHmmss')
+
+    stage('UPLOAD S3') {
+        sh "aws s3 " +
+           "cp ${workspace}/target/testapi-0.0.5-SNAPSHOT.jar " +
+           "s3://elasticbeanstalk-eu-west-1-588272595007/<trigrame>-hello-api.${timestamp}.jar"
+    }
+
+    stage('VERSION APP') {
+        sh "aws elasticbeanstalk create-application-version --application-name <trigrame>-hello-api " +
+           "--version-label <trigrame>-hello-api-${timestamp} " +
+           "--source-bundle S3Bucket=\"elasticbeanstalk-eu-west-1-588272595007\",S3Key=\"<trigrame>-hello-api.${timestamp}.jar\" " +
+           "--no-auto-create-application --process"
+    }
+
+    stage('DEPLOIEMENT ELB') {
+        sh "aws elasticbeanstalk  update-environment --environment-name <trigrame>-Helloapi-env " +
+           "--version-label <trigrame>-hello-api-${timestamp}"
+    }
+...
+----
+
+== L'application installée
+
+Désormais sur votre application : http://<trigrame>-helloapi-env.eu-west-1.elasticbeanstalk.com/swagger-ui.html
+
+image::images/app-hello.png[]
+
+== Ajouter un test automatisé
+
+[source, groovy]
+----
+...    
+    stage('TEST API') {
+        sh '''#!/bin/bash
+              sleep 60
+              http_response=$(curl -s -o /dev/null -w "%{http_code}" -X GET "http://<trigrame>-helloapi-env.eu-west-1.elasticbeanstalk.com/api/v1/hello" -H  "accept: application/json")
+              if [ $http_response != "200" ]; then
+                  echo "erreur $http_response sur GET http://<trigrame>-helloapi-env.eu-west-1.elasticbeanstalk.com/api/v1/hello"
+                  exit 1
+              fi
+        '''
+    }
+...
+----
+

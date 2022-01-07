@@ -1,0 +1,46 @@
+= Sonarqube : Administration
+
+== Configuration Generale
+
+image:images/sonarqube-administration-settings.png[]
+
+== Utilisateurs
+
+image:images/sonarqube-administration-users.png[]
+
+== Groupes
+
+image:images/sonarqube-administration-groups.png[]
+
+== Permissions
+
+image:images/sonarqube-administration-permissions.png[]
+
+== Projets
+
+image:images/sonarqube-administration-projects.png[]
+
+== Créer un projet
+
+image:images/sonarqube-administration-projects-new.png[]
+
+== Monitoring
+
+image:images/sonarqube-administration-monitoring.png[]
+
+== Pluggins
+
+image:images/sonarqube-administration-marketplace.png[]
+
+== Quality Gates
+
+image:images/sonarqube-quality-gates.png[]
+
+== Quality Profiles
+
+image:images/sonarqube-quality-profiles.png[]
+
+== Configurer les Règles
+
+image:images/sonarqube-quality-profile-rules.png[]
+

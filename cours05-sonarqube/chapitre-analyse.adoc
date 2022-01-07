@@ -1,0 +1,71 @@
+= Sonarqube : Analyse
+
+== Lancer une analyse sonar
+
+Via maven
+
+[source, bash]
+---- 
+mvn clean package jacoco:report dependency-check:check sonar:sonar \
+  -Dsonar.projectKey=<SONAR-PROJECT-KEY> \
+  -Dsonar.host.url=<SONAR-URL> \
+  -Dsonar.login=<SONAR-PROJECT-LOGIN>
+----
+
+== Ou via sonar-scanner
+
+Il faut posséder un fichier de configuration sonar-project.properties
+
+[source, bash]
+----
+sonar.login=<SONAR-LOGIN>
+sonar.password=<SONAR-PASSWORD>
+sonar.host.url=<SONAR-URL>
+sonar.scm.disabled=true
+----
+
+[source, bash]
+---- 
+sudo docker run --rm -v ${path-to-config}:/config -v ${project-path}:/data sonar-scanner 
+----
+
+== Project : New Code
+
+image:images/sonarqube-project-new-code.png[]
+
+== Project : All Code
+
+image:images/sonarqube-project-all-code.png[]
+
+== Project : Issues
+
+image:images/sonarqube-project-issues.png[]
+
+== Project : Issue Detail
+
+image:images/sonarqube-project-issue-detail.png[]
+
+== Project : Security Hotspots
+
+image:images/sonarqube-project-security.png[]
+
+== Project : Measures
+
+image:images/sonarqube-project-measures.png[]
+
+== Project : Code
+
+image:images/sonarqube-project-code.png[]
+
+== Project : Code Detail
+
+image:images/sonarqube-project-code-detail.png[]
+
+== Project : Activity
+
+image:images/sonarqube-project-activity.png[]
+
+== Project : Dependency Check
+
+image:images/sonarqube-project-dependency-check.png[]
+
