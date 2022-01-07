@@ -30,8 +30,8 @@ credentials
 [source, bash]
 ----
 [default]
-aws_access_key_id = AKIAYR56HOA72VXNVL75
-aws_secret_access_key = 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
+aws_access_key_id = --------------
+aws_secret_access_key = ----------------
 ----
 
 == Configurer le pipeline
