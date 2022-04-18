@@ -7,7 +7,7 @@ Philippe Bousquet <pbousquet@sqli.com>
 include::headers.adoc[]
 
 == image:images/menu.png[]
-. Installation 
+. Introduction 
 . Administration
 . Les pipelines
 

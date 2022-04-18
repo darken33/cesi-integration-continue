@@ -2,7 +2,7 @@
 
 == Créer un job jenkins
 
-L'lien *New -Item* permet de configurer un nouveau Pipeline
+Le lien *New -Item* permet de configurer un nouveau Pipeline
 
 image:images/jenkins-new-item.png[width=512]
 
@@ -22,7 +22,7 @@ image:images/jenkins-job-triggers.png[width=640]
 
 == Définition du pipeline
 
-Cet onglet permet de configurer le repository ainsi que le fichier défiissant le pipeline
+Cet onglet permet de configurer le repository ainsi que le fichier définissant le pipeline
 
 image:images/jenkins-job-pipeline.png[width=640]
 
@@ -34,7 +34,7 @@ Nous allons maintenant pouvoir définir notre pipeline (en groovy) et celui-ci s
 
 [source, groovy]
 ----
-node() {
+node('slave') {
     stage('STAGE1') {
         ...
     }
@@ -51,7 +51,7 @@ Permet de nettoyer le workspace
 
 [source, groovy]
 ----
-node() {
+node('slave') {
 
     stage('CLEAN WORKSPACE') {
         sh "rm -rf ${workspace}/*"
@@ -62,16 +62,18 @@ node() {
 
 == JenkinsFile : Checkout Git
 
-Ici on remarque l'utilisation du paramètre workingBranch
+Step permettant de récupérer les sources sur git
 
 [source, groovy]
 ----
 ...
+    final def gitParams = [
+        urlProject   : "ssh://git@gitlab.lan.bdx.sqli.com:10022/pbousquet/hello-api.git",
+        credentialsId: "933f83d5-0844-4032-adc7-cc1bacf8b4ef"
+    ]
+...
     stage('CHECKOUT') {
-        if (workingBranch == null || "" == workingBranch) {
-            workingBranch = 'master'
-        }
-        git branch: "${workingBranch}", url: "http://192.168.99.109:8082/root/hello-api.git"[, credentials: ""]
+        git branch: "master", url: "${gitParams.urlProject}", credentials: "${gitParams.credentialsId}"
     }
 ...
 ----
@@ -84,7 +86,7 @@ Via maven installé sur la machine
 ----
 ...
     stage('BUILD/TEST') {
-        sh "mvn clean package"
+        sh "mvn clean package" +
     }
 ...
 ----
@@ -96,10 +98,10 @@ Ou via docker
 ...
     stage('MAVEN BUILD') {
         sh "docker run --rm " +
-            "-v ${sqli_pipeline_path}/settings.xml:/root/.m2/settings.xml " +
-            "-v /home/jenkins/.m2/repository:/root/.m2/repository " +
             "-v ${project_path}:/app " +
-            "maven:3.8.4-jdk-11 clean package -U"
+            "maven:3.8.4-jdk-11 clean package -U " +
+            "jacoco:report " +
+            "dependency-check:check"  
     }
 ...
 ----
@@ -113,7 +115,7 @@ Via maven
 ...
     stage('ANALYSE SONAR') {
         sh "mvn sonar:sonar " +
-            "-Dsonar.host.url=http://192.168.99.109:9000 " +
+            "-Dsonar.host.url=http://sonar-preprod.bordeaux.sqli.com/" +
             "-Dsonar.login=42a5cb4ee32a2fed5f677b21be44c99c4614b868"
     }
 ...
@@ -176,12 +178,34 @@ Ou sonar-scanner (docker)
 ...
 ----
 
+== JenkisFile : Les notifications Teams
+
+[source, groovy]
+----
+...    
+    def message = "Build module hello-api OK <${env.BUILD_URL}|#${env.BUILD_NUMBER}>>.\n"
+    def status = "SUCCESS"
+    def color = "#00ff00"
+    final def office365Endpoint = "https://outlook.office.com/webhook/be99995a-a40c-4d2f-b5d3-1e6803dcbeee@20f62116-4d0c-44ac-8a45-390ca2765601/JenkinsCI/d89466c717c242ab9e5912dbd0d2decb/7ffc9410-d466-4a08-938d-b7350b73aac1"
+
+    try {
+...
+    } catch (Throwable e) {
+        message = "Build module hello-api KO <${env.BUILD_URL}|#${env.BUILD_NUMBER}>.\n"
+        status = "FAILURE"
+        color = "#ff0000"
+        throw e
+    } finally {
+        office365ConnectorSend message: "${message}", status: "${status}", color: "${color}", webhookUrl: "${office365Endpoint}"
+    }
+----
+
 == JenkinsFile : La doc complète
 
 Documentation : https://www.jenkins.io/doc/book/pipeline/ 
 
 == Job Dashboard
 
-Ce dashbord permet de visualiser les anciennes exécutions ainsi qe de déclencher une exécution manuelle
+Ce dashboard permet de visualiser les anciennes exécutions ainsi que de déclencher une exécution manuelle
 
 image:images/jenkins-pipeline.png[width=640]
