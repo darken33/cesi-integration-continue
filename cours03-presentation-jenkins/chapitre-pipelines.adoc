@@ -73,7 +73,7 @@ Step permettant de récupérer les sources sur git
     ]
 ...
     stage('CHECKOUT') {
-        git branch: "master", url: "${gitParams.urlProject}", credentials: "${gitParams.credentialsId}"
+        git branch: "master", url: "${gitParams.urlProject}", credentialsId: "${gitParams.credentialsId}"
     }
 ...
 ----
