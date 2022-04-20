@@ -186,7 +186,7 @@ Ou sonar-scanner (docker)
     def message = "Build module hello-api OK <${env.BUILD_URL}|#${env.BUILD_NUMBER}>>.\n"
     def status = "SUCCESS"
     def color = "#00ff00"
-    final def office365Endpoint = "https://outlook.office.com/webhook/be99995a-a40c-4d2f-b5d3-1e6803dcbeee@20f62116-4d0c-44ac-8a45-390ca2765601/JenkinsCI/d89466c717c242ab9e5912dbd0d2decb/7ffc9410-d466-4a08-938d-b7350b73aac1"
+    final def office365Endpoint = "https://outlook.office.com/webhook/<key1>/JenkinsCI/<key2>"
 
     try {
 ...
